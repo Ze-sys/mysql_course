@@ -1,0 +1,162 @@
+mysql> quit
+mysql> create database trigger_demo;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> use trigger_demo;
+Database changed
+mysql> source users.sql
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CEREATE TABLE users (
+username VARCHAR(100),
+    age INT
+)' at line 1
+mysql> source users.sql
+Query OK, 0 rows affected (0.15 sec)
+
+mysql> desc users
+    -> ;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| username | varchar(100) | YES  |     | NULL    |       |
+| age      | int(11)      | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+
+mysql> INSERT INTO users(username, age) VALUES('booby',22);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from users;
++----------+------+
+| username | age  |
++----------+------+
+| booby    |   22 |
++----------+------+
+1 row in set (0.00 sec)
+
+mysql> DELETE FROM users where username='booby';
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from users;
+Empty set (0.00 sec)
+
+mysql> INSERT INTO users(username, age) VALUES('bobby',22);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from users;
++----------+------+
+| username | age  |
++----------+------+
+| bobby    |   22 |
++----------+------+
+1 row in set (0.00 sec)
+
+mysql> INSERT INTO users(username, age) VALUES('young',17);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from users;
++----------+------+
+| username | age  |
++----------+------+
+| bobby    |   22 |
+| young    |   17 |
++----------+------+
+2 rows in set (0.00 sec)
+
+mysql> source users_trigger.sql
+Query OK, 0 rows affected (0.07 sec)
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DELIMITER' at line 1
+mysql> source users_trigger.sql
+ERROR 1359 (HY000): Trigger already exists
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DELIMITER' at line 1
+mysql> source users_trigger.sql
+ERROR 1359 (HY000): Trigger already exists
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DELIMITER' at line 1
+mysql> source users_trigger.sql
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'END' at line 9
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DELIMITER' at line 1
+mysql> source users_trigger.sql
+ERROR 1359 (HY000): Trigger already exists
+mysql> INSERT INTO users(username, age) VALUES('Alan',55);
+Query OK, 1 row affected (0.09 sec)
+
+mysql> INSERT INTO users(username, age) VALUES('Max',15);
+ERROR 1644 (45000): Must be an adult!
+mysql> select 'triggr working! Will modify the trigger to validate emails for the JoinUs nodejs app!' as note;
++---------------------------------------------------------------------------------------+
+| note                                                                                  |
++---------------------------------------------------------------------------------------+
+| triggr working! Will modify the trigger to validate emails for the JoinUs nodejs app! |
++---------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> show databases 
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| bakery_app         |
+| books_db           |
+| cats_app           |
+| dogs_app           |
+| ig_clone           |
+| join_us            |
+| mysql              |
+| performance_schema |
+| shirts_db          |
+| students_db        |
+| sys                |
+| trigger_demo       |
+| tv_reviews_app     |
++--------------------+
+14 rows in set (0.03 sec)
+
+mysql> use ig_clone
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++--------------------+
+| Tables_in_ig_clone |
++--------------------+
+| comments           |
+| follows            |
+| likes              |
+| photo_tags         |
+| photos             |
+| tags               |
+| users              |
++--------------------+
+7 rows in set (0.01 sec)
+
+mysql> select * from follows limit 2;
++-------------+-------------+---------------------+
+| follower_id | followee_id | created_at          |
++-------------+-------------+---------------------+
+|           2 |           1 | 2022-01-07 03:23:07 |
+|           2 |           3 | 2022-01-07 03:23:07 |
++-------------+-------------+---------------------+
+2 rows in set (0.00 sec)
+
+mysql> INSERT INTO follows (follower_id,followee_id) VALUES(5,5);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from follows WHERE follower_id = followee_id;
++-------------+-------------+---------------------+
+| follower_id | followee_id | created_at          |
++-------------+-------------+---------------------+
+|           5 |           5 | 2022-02-21 07:18:01 |
++-------------+-------------+---------------------+
+1 row in set (0.00 sec)
+
+mysql> select 'one can"t follow themself as above. We are going to prevent it with a trigger' as note;
++-------------------------------------------------------------------------------+
+| note                                                                          |
++-------------------------------------------------------------------------------+
+| one can"t follow themself as above. We are going to prevent it with a trigger |
++-------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> quit

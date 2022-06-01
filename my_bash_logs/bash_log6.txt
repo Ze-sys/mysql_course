@@ -1,0 +1,81 @@
+Script started on 2022-02-20 20:56:39+0000
+]0;root@goorm: /workspace/z/nodejs-apps/JoinUs[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps/JoinUs[00m# [H[2J]0;root@goorm: /workspace/z/nodejs-apps/JoinUs[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps/JoinUs[00m# [K]0;root@goorm: /workspace/z/nodejs-apps/JoinUs[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps/JoinUs[00m# node app.js 
+App listening at port [33m3000[39m
+[1mnull[22m
+OkPacket {
+  fieldCount: [33m0[39m,
+  affectedRows: [33m1[39m,
+  insertId: [33m0[39m,
+  serverStatus: [33m2[39m,
+  warningCount: [33m0[39m,
+  message: [32m''[39m,
+  protocol41: [33mtrue[39m,
+  changedRows: [33m0[39m
+}
+[1mnull[22m
+OkPacket {
+  fieldCount: [33m0[39m,
+  affectedRows: [33m1[39m,
+  insertId: [33m0[39m,
+  serverStatus: [33m2[39m,
+  warningCount: [33m0[39m,
+  message: [32m''[39m,
+  protocol41: [33mtrue[39m,
+  changedRows: [33m0[39m
+}
+^C
+]0;root@goorm: /workspace/z/nodejs-apps/JoinUs[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps/JoinUs[00m# [H[2J]0;root@goorm: /workspace/z/nodejs-apps/JoinUs[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps/JoinUs[00m# node app.js 
+App listening at port [33m3000[39m
+[1mnull[22m
+OkPacket {
+  fieldCount: [33m0[39m,
+  affectedRows: [33m1[39m,
+  insertId: [33m0[39m,
+  serverStatus: [33m2[39m,
+  warningCount: [33m0[39m,
+  message: [32m''[39m,
+  protocol41: [33mtrue[39m,
+  changedRows: [33m0[39m
+}
+^C
+]0;root@goorm: /workspace/z/nodejs-apps/JoinUs[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps/JoinUs[00m# node app.js 
+App listening at port [33m3000[39m
+TypeError: person.trim is not a function
+    at /workspace/z/nodejs-apps/JoinUs/app.js:32:23
+    at Layer.handle [as handle_request] (/workspace/z/nodejs-apps/JoinUs/node_modules/express/lib/router/layer.js:95:5)
+    at next (/workspace/z/nodejs-apps/JoinUs/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/workspace/z/nodejs-apps/JoinUs/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/workspace/z/nodejs-apps/JoinUs/node_modules/express/lib/router/layer.js:95:5)
+    at /workspace/z/nodejs-apps/JoinUs/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/workspace/z/nodejs-apps/JoinUs/node_modules/express/lib/router/index.js:341:12)
+    at next (/workspace/z/nodejs-apps/JoinUs/node_modules/express/lib/router/index.js:275:10)
+    at /workspace/z/nodejs-apps/JoinUs/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/workspace/z/nodejs-apps/JoinUs/node_modules/raw-body/index.js:224:16)
+^C
+]0;root@goorm: /workspace/z/nodejs-apps/JoinUs[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps/JoinUs[00m# node app.js cd /workspace/mysql; clear
+[H[2J]0;root@goorm: /workspace/mysql[01;32mroot@goorm[00m:[01;34m/workspace/mysql[00m# cd /workspace/mysql; clear[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcd ../z/nodejs-apps/JoinUs/
+]0;root@goorm: /workspace/z/nodejs-apps/JoinUs[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps/JoinUs[00m# cd ../z/nodejs-apps/JoinUs/[1P/workspace/mysql; clear[14Pnode app.js 
+App listening at port [33m3000[39m
+[1mnull[22m
+OkPacket {
+  fieldCount: [33m0[39m,
+  affectedRows: [33m1[39m,
+  insertId: [33m0[39m,
+  serverStatus: [33m2[39m,
+  warningCount: [33m0[39m,
+  message: [32m''[39m,
+  protocol41: [33mtrue[39m,
+  changedRows: [33m0[39m
+}
+^C
+]0;root@goorm: /workspace/z/nodejs-apps/JoinUs[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps/JoinUs[00m# node app.js 
+App listening at port [33m3000[39m
+[1mnull[22m
+OkPacket {
+  fieldCount: [33m0[39m,
+  affectedRows: [33m1[39m,
+  insertId: [33m0[39m,
+  serverStatus: [33m2[39m,
+  warningCount: [33m0[39m,
+  message: [32m''[39m,
+  protocol41: [33mtrue[

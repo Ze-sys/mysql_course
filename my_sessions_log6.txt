@@ -1,0 +1,228 @@
+mysql> mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| bakery_app         |
+| books_db           |
+| cats_app           |
+| dogs_app           |
+| ig_clone           |
+| join_us            |
+| mysql              |
+| performance_schema |
+| shirts_db          |
+| students_db        |
+| sys                |
+| tv_reviews_app     |
++--------------------+
+13 rows in set (0.02 sec)
+
+mysql> quit
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| bakery_app         |
+| books_db           |
+| cats_app           |
+| dogs_app           |
+| ig_clone           |
+| join_us            |
+| mysql              |
+| performance_schema |
+| shirts_db          |
+| students_db        |
+| sys                |
+| tv_reviews_app     |
++--------------------+
+13 rows in set (0.00 sec)
+
+mysql> use join_us
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++-------------------+
+| Tables_in_join_us |
++-------------------+
+| users             |
++-------------------+
+1 row in set (0.01 sec)
+
+mysql> select * from users order by created_at desc limit 5;
++-----------------------------+---------------------+
+| email                       | created_at          |
++-----------------------------+---------------------+
+| xyz@user.com                | 2022-02-20 20:38:38 |
+| newuser@newuser.com         | 2022-02-20 20:30:58 |
+| Vivian.Connelly53@gmail.com | 2022-01-10 08:07:56 |
+| Greyson70@gmail.com         | 2022-01-08 20:36:41 |
+| Boyd_Legros4@yahoo.com      | 2022-01-08 17:39:17 |
++-----------------------------+---------------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from users order by created_at desc limit 5;
++-----------------------------+---------------------+
+| email                       | created_at          |
++-----------------------------+---------------------+
+| happyttojoin@happy.com      | 2022-02-20 21:04:10 |
+| xyz@user.com                | 2022-02-20 20:38:38 |
+| newuser@newuser.com         | 2022-02-20 20:30:58 |
+| Vivian.Connelly53@gmail.com | 2022-01-10 08:07:56 |
+| Greyson70@gmail.com         | 2022-01-08 20:36:41 |
++-----------------------------+---------------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from users order by created_at desc limit 5;
++-----------------------------+---------------------+
+| email                       | created_at          |
++-----------------------------+---------------------+
+|                             | 2022-02-20 21:04:59 |
+| happyttojoin@happy.com      | 2022-02-20 21:04:10 |
+| xyz@user.com                | 2022-02-20 20:38:38 |
+| newuser@newuser.com         | 2022-02-20 20:30:58 |
+| Vivian.Connelly53@gmail.com | 2022-01-10 08:07:56 |
++-----------------------------+---------------------+
+5 rows in set (0.00 sec)
+
+mysql> select 'I noticed we should catch empty request.body.email cases since right now just a click on the jion us button registers empty email field.' as note;
++------------------------------------------------------------------------------------------------------------------------------------------+
+| note                                                                                                                                     |
++------------------------------------------------------------------------------------------------------------------------------------------+
+| I noticed we should catch empty request.body.email cases since right now just a click on the jion us button registers empty email field. |
++------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from users where email is NULL;
+Empty set (0.07 sec)
+
+mysql> select * from users order by created_at desc limit 1;
++-------+---------------------+
+| email | created_at          |
++-------+---------------------+
+|       | 2022-02-20 21:04:59 |
++-------+---------------------+
+1 row in set (0.10 sec)
+
+mysql> select email from users order by created_at desc limit 1;
++-------+
+| email |
++-------+
+|       |
++-------+
+1 row in set (0.00 sec)
+
+mysql> select email from users where email NULL;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NULL' at line 1
+mysql> select email from users where email== NULL;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== NULL' at line 1
+mysql> select email from users where email == NULL;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== NULL' at line 1
+mysql> select email from users where email IS NULL;
+Empty set (0.00 sec)
+
+mysql> select CHAR_LENGHT(email) from users where email IS NULL;
+ERROR 1305 (42000): FUNCTION join_us.CHAR_LENGHT does not exist
+mysql> select CHAR_LENGTH(email) from users where email IS NULL;
+Empty set (0.00 sec)
+
+mysql> select * from users where  CHAR_LENGTH(email)==0;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '==0' at line 1
+mysql> select * from users where  CHAR_LENGTH(email) == 0;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 0' at line 1
+mysql> select * from users where  CHAR_LENGTH(email) = 0;
++-------+---------------------+
+| email | created_at          |
++-------+---------------------+
+|       | 2022-02-20 21:04:59 |
++-------+---------------------+
+1 row in set (0.10 sec)
+
+mysql> DELETE FROM users where CHAR_LENGTH(email) = 0;
+Query OK, 1 row affected (0.16 sec)
+
+mysql> select * from users where  CHAR_LENGTH(email)=0;
+Empty set (0.00 sec)
+
+mysql> select email from users order by created_at desc limit 5;
++-----------------------------+
+| email                       |
++-----------------------------+
+| happyttojoin@happy.com      |
+| xyz@user.com                |
+| newuser@newuser.com         |
+| Vivian.Connelly53@gmail.com |
+| Greyson70@gmail.com         |
++-----------------------------+
+5 rows in set (0.06 sec)
+
+mysql> select email from users order by created_at desc limit 5;
++-----------------------------+
+| email                       |
++-----------------------------+
+|                             |
+| happyttojoin@happy.com      |
+| xyz@user.com                |
+| newuser@newuser.com         |
+| Vivian.Connelly53@gmail.com |
++-----------------------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from users order by created_at desc limit 5;
++-----------------------------+---------------------+
+| email                       | created_at          |
++-----------------------------+---------------------+
+|                             | 2022-02-20 21:27:11 |
+| happyttojoin@happy.com      | 2022-02-20 21:04:10 |
+| xyz@user.com                | 2022-02-20 20:38:38 |
+| newuser@newuser.com         | 2022-02-20 20:30:58 |
+| Vivian.Connelly53@gmail.com | 2022-01-10 08:07:56 |
++-----------------------------+---------------------+
+5 rows in set (0.00 sec)
+
+mysql> DELETE FROM users where CHAR_LENGTH(email) = 0;
+Query OK, 1 row affected (0.07 sec)
+
+mysql> select * from users order by created_at desc limit 5;
++-----------------------------+---------------------+
+| email                       | created_at          |
++-----------------------------+---------------------+
+| happyttojoin@happy.com      | 2022-02-20 21:04:10 |
+| xyz@user.com                | 2022-02-20 20:38:38 |
+| newuser@newuser.com         | 2022-02-20 20:30:58 |
+| Vivian.Connelly53@gmail.com | 2022-01-10 08:07:56 |
+| Greyson70@gmail.com         | 2022-01-08 20:36:41 |
++-----------------------------+---------------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from users order by created_at desc limit 5;
++-----------------------------+---------------------+
+| email                       | created_at          |
++-----------------------------+---------------------+
+|                             | 2022-02-20 21:36:48 |
+| happyttojoin@happy.com      | 2022-02-20 21:04:10 |
+| xyz@user.com                | 2022-02-20 20:38:38 |
+| newuser@newuser.com         | 2022-02-20 20:30:58 |
+| Vivian.Connelly53@gmail.com | 2022-01-10 08:07:56 |
++-----------------------------+---------------------+
+5 rows in set (0.00 sec)
+
+mysql> DELETE FROM users where CHAR_LENGTH(email) = 0;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from users order by created_at desc limit 5;
++-----------------------------+---------------------+
+| email                       | created_at          |
++-----------------------------+---------------------+
+| happyttojoin@happy.com      | 2022-02-20 21:04:10 |
+| xyz@user.com                | 2022-02-20 20:38:38 |
+| newuser@newuser.com         | 2022-02-20 20:30:58 |
+| Vivian.Connelly53@gmail.com | 2022-01-10 08:07:56 |
+| Greyson70@gmail.com         | 2022-01-08 20:36:41 |
++-----------------------------+---------------------+
+5 rows in set (0.00 sec)
+
+mysql> 

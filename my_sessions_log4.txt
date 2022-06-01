@@ -1,0 +1,222 @@
+mysql> use join_us;
+Database changed
+mysql> source schema.sql;
+mysql> desc users;
+ERROR 1146 (42S02): Table 'join_us.users' doesn't exist
+mysql> show tables;
+Empty set (0.06 sec)
+
+mysql> -- Ok. didn't save schema.sql. Try now.
+mysql> source schema.sql;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TIMESTAMP DEFAULT NOW()    
+)' at line 3
+mysql> source schema.sql;
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> show tables;
++-------------------+
+| Tables_in_join_us |
++-------------------+
+| users             |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> desc users;
++------------+--------------+------+-----+-------------------+-------+
+| Field      | Type         | Null | Key | Default           | Extra |
++------------+--------------+------+-----+-------------------+-------+
+| email      | varchar(255) | NO   | PRI | NULL              |       |
+| created_at | timestamp    | NO   |     | CURRENT_TIMESTAMP |       |
++------------+--------------+------+-----+-------------------+-------+
+2 rows in set (0.00 sec)
+
+mysql> INSERT INTO users (email) VALUES ("Katie37@yahoo.com", "George88@gmail.com");
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> INSERT INTO users (email) VALUES ("Katie37@yahoo.com"), ("George88@gmail.com");
+Query OK, 2 rows affected (0.07 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from users;
++--------------------+---------------------+
+| email              | created_at          |
++--------------------+---------------------+
+| George88@gmail.com | 2022-01-11 05:03:08 |
+| Jakson59@yahoo.com | 2022-01-11 05:15:12 |
+| Katie37@yahoo.com  | 2022-01-11 05:03:08 |
++--------------------+---------------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from users;
++---------------------+---------------------+
+| email               | created_at          |
++---------------------+---------------------+
+| George88@gmail.com  | 2022-01-11 05:03:08 |
+| Jakson59@yahoo.com  | 2022-01-11 05:15:12 |
+| jeanny666@gmail.com | 2022-01-11 05:24:49 |
+| jeanny777@gmail.com | 2022-01-11 05:25:17 |
+| Katie37@yahoo.com   | 2022-01-11 05:03:08 |
++---------------------+---------------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from users order by created_at desc limit 1;
++--------------------------+---------------------+
+| email                    | created_at          |
++--------------------------+---------------------+
+| Triston_Hammes@gmail.com | 2022-01-11 05:27:40 |
++--------------------------+---------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from users order by created_at desc limit 1;
++--------------------------+---------------------+
+| email                    | created_at          |
++--------------------------+---------------------+
+| Triston_Hammes@gmail.com | 2022-01-11 05:27:40 |
++--------------------------+---------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from users order by created_at  limit 1;
++------------------------+---------------------+
+| email                  | created_at          |
++------------------------+---------------------+
+| Anais_Kris@hotmail.com | 2021-09-25 12:53:11 |
++------------------------+---------------------+
+1 row in set (0.00 sec)
+
+mysql> 
+mysql> 
+mysql> select count(*) from users;
++----------+
+| count(*) |
++----------+
+|       11 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> -- after bulk insertion of 500 users
+mysql> select count(*) from users;
++----------+
+| count(*) |
++----------+
+|      511 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> -- Boom!
+mysql> -- Gonna drop table now and create again with just 500 users
+mysql> DROP TABLE users;
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> source schema.sql
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> desc users;
++------------+--------------+------+-----+-------------------+-------+
+| Field      | Type         | Null | Key | Default           | Extra |
++------------+--------------+------+-----+-------------------+-------+
+| email      | varchar(255) | NO   | PRI | NULL              |       |
+| created_at | timestamp    | NO   |     | CURRENT_TIMESTAMP |       |
++------------+--------------+------+-----+-------------------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select from users;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from users' at line 1
+mysql> select * from users;
+Empty set (0.08 sec)
+
+mysql> select count(*) from users;
++----------+
+| count(*) |
++----------+
+|        0 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> -- after bulk insert
+mysql> select count(*) from users;
++----------+
+| count(*) |
++----------+
+|      500 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select * from users limit 5;
++------------------------------+---------------------+
+| email                        | created_at          |
++------------------------------+---------------------+
+| Abdullah.Sporer@hotmail.com  | 2021-09-21 17:45:30 |
+| Adrien.Kautzer64@gmail.com   | 2021-02-01 01:22:40 |
+| Afton.Torp@hotmail.com       | 2021-05-27 16:02:39 |
+| Afton_Smitham63@gmail.com    | 2021-05-26 23:05:28 |
+| Aglae.Konopelski84@gmail.com | 2021-09-04 11:27:13 |
++------------------------------+---------------------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT created_at FROM users ORDER BY 1 DESC LIMIT 1;
++---------------------+
+| created_at          |
++---------------------+
+| 2022-01-10 08:07:56 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DATE(created_at,'%B %D %y') FROM users ORDER BY 1 DESC LIMIT 1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''%B %D %y') FROM users ORDER BY 1 DESC LIMIT 1' at line 1
+mysql> SELECT DATE(created_at) FROM users ORDER BY 1 DESC LIMIT 1;
++------------------+
+| DATE(created_at) |
++------------------+
+| 2022-01-10       |
++------------------+
+1 row in set (0.06 sec)
+
+mysql> SELECT date_format(created_at, '%B %D %Y') FROM users ORDER BY 1 DESC LIMIT 1;
++-------------------------------------+
+| date_format(created_at, '%B %D %Y') |
++-------------------------------------+
+| B 9th 2021                          |
++-------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT date_format(created_at, '%b %D %Y') FROM users ORDER BY 1 DESC LIMIT 1;
++-------------------------------------+
+| date_format(created_at, '%b %D %Y') |
++-------------------------------------+
+| Sep 9th 2021                        |
++-------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT concat( 'The earliest date a user joined us was : ',date_format(created_at, '%b %D %Y')) as date info FROM users ORDER BY 1 DESC LIMIT 1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'info FROM users ORDER BY 1 DESC LIMIT 1' at line 1
+mysql> SELECT concat( 'The earliest date a user joined us was : ',date_format(created_at, '%b %D %Y')) as 'date info' FROM users ORDER BY 1 DESC LIMIT 1;
++-------------------------------------------------------+
+| date info                                             |
++-------------------------------------------------------+
+| The earliest date a user joined us was : Sep 9th 2021 |
++-------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT concat( 'The earliest date a user joined us was : ',date_format(created_at, '%b %D %Y'), 'her/his email address is', email) as 'date and email info' FROM users ORDER BY 1 DESC LIMIT 1;
++----------------------------------------------------------------------------------------------------------+
+| date and email info                                                                                      |
++----------------------------------------------------------------------------------------------------------+
+| The earliest date a user joined us was : Sep 9th 2021her/his email address isOrlando_Zboncak53@gmail.com |
++----------------------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT concat( 'The earliest date a user joined us was : ',date_format(created_at, '%b %D %Y'), 'her/his email address is ', email, '.') as 'date and email info' FROM users ORDER BY 1 DESC LIMIT 1;
++------------------------------------------------------------------------------------------------------------+
+| date and email info                                                                                        |
++------------------------------------------------------------------------------------------------------------+
+| The earliest date a user joined us was : Sep 9th 2021her/his email address is Orlando_Zboncak53@gmail.com. |
++------------------------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT concat( 'The earliest date a user joined us was : ',date_format(created_at, '%b %D %Y'), ' the  email address is ', email, '.') as 'date and email info' FROM users ORDER BY 1 DESC LIMIT 1;
++----------------------------------------------------------------------------------------------------------+
+| date and email info                                                                                      |
++----------------------------------------------------------------------------------------------------------+
+| The earliest date a user joined us was : Sep 9th 2021 the  email address is Orlando_Zboncak53@gmail.com. |
++----------------------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+

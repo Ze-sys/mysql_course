@@ -1,0 +1,215 @@
+mysql> show database
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'database' at line 1
+mysql> show database
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'database' at line 1
+mysql> use join_us;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show database
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'database' at line 1
+mysql> show tables;
++-------------------+
+| Tables_in_join_us |
++-------------------+
+| users             |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> desc users;
++------------+--------------+------+-----+-------------------+-------+
+| Field      | Type         | Null | Key | Default           | Extra |
++------------+--------------+------+-----+-------------------+-------+
+| email      | varchar(255) | NO   | PRI | NULL              |       |
+| created_at | timestamp    | NO   |     | CURRENT_TIMESTAMP |       |
++------------+--------------+------+-----+-------------------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select email from users limit 5;
++------------------------------+
+| email                        |
++------------------------------+
+| Abdullah.Sporer@hotmail.com  |
+| Adrien.Kautzer64@gmail.com   |
+| Afton.Torp@hotmail.com       |
+| Afton_Smitham63@gmail.com    |
+| Aglae.Konopelski84@gmail.com |
++------------------------------+
+5 rows in set (0.17 sec)
+
+mysql> select count(*) from users;
++----------+
+| count(*) |
++----------+
+|      500 |
++----------+
+1 row in set (0.01 sec)
+
+mysql> mysql> show dbs
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'dbs' at line 1
+mysql> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| bakery_app         |
+| books_db           |
+| cats_app           |
+| dogs_app           |
+| ig_clone           |
+| join_us            |
+| mysql              |
+| performance_schema |
+| shirts_db          |
+| students_db        |
+| sys                |
+| tv_reviews_app     |
++--------------------+
+13 rows in set (0.11 sec)
+
+mysql> use join_us;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> 
+mysql> mysql> use join_us;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++-------------------+
+| Tables_in_join_us |
++-------------------+
+| users             |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from users limit 2;
++-----------------------------+---------------------+
+| email                       | created_at          |
++-----------------------------+---------------------+
+| Abdullah.Sporer@hotmail.com | 2021-09-21 17:45:30 |
+| Adrien.Kautzer64@gmail.com  | 2021-02-01 01:22:40 |
++-----------------------------+---------------------+
+2 rows in set (0.20 sec)
+
+mysql> select  MONTH(created_at) as month, count(*) as count from users group by month;
++-------+-------+
+| month | count |
++-------+-------+
+|     1 |    44 |
+|     2 |    41 |
+|     3 |    45 |
+|     4 |    38 |
+|     5 |    58 |
+|     6 |    37 |
+|     7 |    38 |
+|     8 |    32 |
+|     9 |    44 |
+|    10 |    45 |
+|    11 |    43 |
+|    12 |    35 |
++-------+-------+
+12 rows in set (0.02 sec)
+
+mysql> select  MONTHNAME(created_at) as month, count(*) as count from users group by month;
++-----------+-------+
+| month     | count |
++-----------+-------+
+| April     |    38 |
+| August    |    32 |
+| December  |    35 |
+| February  |    41 |
+| January   |    44 |
+| July      |    38 |
+| June      |    37 |
+| March     |    45 |
+| May       |    58 |
+| November  |    43 |
+| October   |    45 |
+| September |    44 |
++-----------+-------+
+12 rows in set (0.02 sec)
+
+mysql> select  MONTHNAME(created_at) as month, count(*) as count from users group by month order by MONTH(craeted_at);
+ERROR 1054 (42S22): Unknown column 'craeted_at' in 'order clause'
+mysql> select  MONTHNAME(created_at) as month, count(*) as count from users group by month order by MONTH(created_at);
++-----------+-------+
+| month     | count |
++-----------+-------+
+| January   |    44 |
+| February  |    41 |
+| March     |    45 |
+| April     |    38 |
+| May       |    58 |
+| June      |    37 |
+| July      |    38 |
+| August    |    32 |
+| September |    44 |
+| October   |    45 |
+| November  |    43 |
+| December  |    35 |
++-----------+-------+
+12 rows in set (0.00 sec)
+
+mysql> select  count(*) as yahoo_users from users where email like '%yahoo.com%';
++-------------+
+| yahoo_users |
++-------------+
+|         153 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT COUNT(*) AS totlat_users CASE WHEN email LIKE '%gmail.com%' THEN 'gmail' CASE WHEN  email LIKE  '%yahoo.com%' THEN 'yahoo' CASE WHEN email LIKE '%hotmail.com%' THEN 'hotmail' ELSE 'other' END AS provider FROM users; 
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CASE WHEN email LIKE '%gmail.com%' THEN 'gmail' CASE WHEN  email LIKE  '%yahoo.c' at line 1
+mysql> SELECT COUNT(*) CASE WHEN email LIKE '%gmail.com%' THEN 'gmail' WHEN  email LIKE  '%yahoo.com%' THEN 'yahoo'  WHEN email LIKE '%hotmail.com%' THEN 'hotmail' ELSE 'other' END AS provider FROM users;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CASE WHEN email LIKE '%gmail.com%' THEN 'gmail' WHEN  email LIKE  '%yahoo.com%' ' at line 1
+mysql> SELECT COUNT(*) AS total_users  CASE WHEN email LIKE '%gmail.com%' THEN 'gmail' WHEN  email LIKE  '%yahoo.com%' THEN 'yahoo'  WHEN email LIKE '%hotmail.com%' THEN 'hotmail' ELSE 'other' END AS provider FROM users;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CASE WHEN email LIKE '%gmail.com%' THEN 'gmail' WHEN  email LIKE  '%yahoo.com%' ' at line 1
+mysql> SELECT COUNT(*) AS total_users,  CASE WHEN email LIKE '%gmail.com%' THEN 'gmail' WHEN  email LIKE  '%yahoo.com%' THEN 'yahoo'  WHEN email LIKE '%hotmail.com%' THEN 'hotmail' ELSE 'other' END AS provider FROM users;
++-------------+----------+
+| total_users | provider |
++-------------+----------+
+|         500 | hotmail  |
++-------------+----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT COUNT(*) AS total_users,  CASE WHEN email LIKE '%gmail.com%' THEN 'gmail' WHEN  email LIKE  '%yahoo.com%' THEN 'yahoo'  WHEN email LIKE '%hotmail.com%' THEN 'hotmail' ELSE 'other' END AS provider FROM users GROUP BY provider;
++-------------+----------+
+| total_users | provider |
++-------------+----------+
+|         172 | gmail    |
+|         175 | hotmail  |
+|         153 | yahoo    |
++-------------+----------+
+3 rows in set (0.00 sec)
+
+mysql> source ../join_us_db_excercise.sql
+ERROR: 
+Failed to open file '../join_us_db_excercise.sql', error: 2
+mysql> source ../join_us_db_exercise.sql
++-------------+----------+
+| total_users | provider |
++-------------+----------+
+|         153 | yahoo    |
+|         172 | gmail    |
+|         175 | hotmail  |
++-------------+----------+
+3 rows in set (0.01 sec)
+
+mysql> SELECT 'This ends the MySQL focus of the course. Moving on to the more exciting topic of the course, which is web app development using node.js!' as note;
++------------------------------------------------------------------------------------------------------------------------------------------+
+| note                                                                                                                                     |
++------------------------------------------------------------------------------------------------------------------------------------------+
+| This ends the MySQL focus of the course. Moving on to the more exciting topic of the course, which is web app development using node.js! |
++------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+

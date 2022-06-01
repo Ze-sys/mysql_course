@@ -1,0 +1,206 @@
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   c35ab42..4642162  main -> main
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   4642162..21f5c97  main -> main
+2021-Dec-25:00:54:28 :
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   21f5c97..49f1aac  main -> main
+2021-Dec-25:00:55:29
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   49f1aac..17b4570  main -> main
+2021-Dec-25:00:57:34
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   17b4570..c99dd20  main -> main
+session as of 2021-Dec-25:00:57:49 utc
+Everything up-to-date
+session as of 2021-Dec-25:00:58:54 utc
+Everything up-to-date
+session as of "$d" utc
+Everything up-to-date
+session as of "$d" utc
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   c99dd20..0b4ba3b  main -> main
+session as of  2021-Dec-25:01:02:27 utc
+Everything up-to-date
+session as of 2021-Dec-25:01:03:11 utc
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   0b4ba3b..5e75d4d  main -> main
+2021-Dec-25:01:17:09 utc
+[main 9062232] session as of  2021-Dec-25:01:17:09 utc
+ 3 files changed, 8 insertions(+), 4 deletions(-)
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   5e75d4d..9062232  main -> main
+[main 8bf1f8a] session as of  2021-Dec-25:01:21:53 utc
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   9062232..8bf1f8a  main -> main
+[main 835bf2e] session as of  2021-Dec-25:02:03:59 utc
+ 2 files changed, 172 insertions(+)
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   8bf1f8a..835bf2e  main -> main
+[main eced2df] session as of  2021-Dec-25:03:06:57 utc
+ 2 files changed, 444 insertions(+)
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   835bf2e..eced2df  main -> main
+[main de387d1] session as of  2021-Dec-25:06:19:49 utc
+ 2 files changed, 285 insertions(+)
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   eced2df..de387d1  main -> main
+[main 83e1efe] session as of  2021-Dec-27:07:50:49 utc
+ 2 files changed, 145 insertions(+)
+ create mode 100644 my_session_log.txt
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   de387d1..83e1efe  main -> main
+[main 32d35e4] session as of  2021-Dec-28:06:08:50 utc
+ 3 files changed, 917 insertions(+)
+ create mode 100644 q.sql
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   83e1efe..32d35e4  main -> main
+[main fe9963f] session as of  2021-Dec-30:01:22:09 utc
+ 2 files changed, 522 insertions(+)
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   32d35e4..fe9963f  main -> main
+[main a4384de] session as of  2021-Dec-30:04:29:48 utc
+ 2 files changed, 1767 insertions(+), 1 deletion(-)
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   fe9963f..a4384de  main -> main
+[main 716625d] session as of  2021-Dec-30:07:41:27 utc
+ 2 files changed, 1092 insertions(+)
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   a4384de..716625d  main -> main
+[main fbe617d] session as of  2021-Dec-30:07:46:42 utc
+ 2 files changed, 58 insertions(+)
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   716625d..fbe617d  main -> main
+[main 28fc868] session as of  2021-Dec-30:23:11:48 utc
+ 2 files changed, 272 insertions(+)
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   fbe617d..28fc868  main -> main
+[main 5a6965a] session as of  2021-Dec-31:03:29:55 utc
+ 2 files changed, 1456 insertions(+)
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   28fc868..5a6965a  main -> main
+[main c9d3018] session as of  2021-12월-31:06:02:34 utc
+ 2 files changed, 232 insertions(+)
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   5a6965a..c9d3018  main -> main
+[main 2c0b458] session as of  2021-Dec-31:07:37:32 utc
+ 2 files changed, 771 insertions(+)
+ create mode 100644 my_sessions_log1.txt
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   c9d3018..2c0b458  main -> main
+fatal: (현재 폴더 또는 상위 폴더 부터 마운트 위치 / 까지 일부가) 깃 저장소가 아닙니다
+파일 시스템 경계에서 중지합니다. (GIT_DISCOVERY_ACROSS_FILESYSTEM 설정되지 않음)
+fatal: (현재 폴더 또는 상위 폴더 부터 마운트 위치 / 까지 일부가) 깃 저장소가 아닙니다
+파일 시스템 경계에서 중지합니다. (GIT_DISCOVERY_ACROSS_FILESYSTEM 설정되지 않음)
+fatal: (현재 폴더 또는 상위 폴더 부터 마운트 위치 / 까지 일부가) 깃 저장소가 아닙니다
+파일 시스템 경계에서 중지합니다. (GIT_DISCOVERY_ACROSS_FILESYSTEM 설정되지 않음)
+[main 45b35c2] session as of  2022-Jan-02:04:09:15 utc
+ 4 files changed, 3780 insertions(+)
+ create mode 100644 q1.sql
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   2c0b458..45b35c2  main -> main
+[main 9ccf326] session as of  2022-Jan-02:06:52:54 utc
+ 3 files changed, 1486 insertions(+), 19 deletions(-)
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   45b35c2..9ccf326  main -> main
+[main 44f698c] session as of  2022-Jan-02:23:57:27 utc
+ 3 files changed, 1958 insertions(+), 30 deletions(-)
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   9ccf326..44f698c  main -> main
+[main 522cddc] session as of  2022-Jan-06:07:58:22 utc
+ 5 files changed, 1385 insertions(+)
+ create mode 100644 Instagram/ig_clone.sql
+ create mode 100644 my_sessions_log2.txt
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   44f698c..522cddc  main -> main
+[main dc23d4c] session as of  2022-Jan-09:07:59:36 utc
+ 4 files changed, 14723 insertions(+), 66 deletions(-)
+ rewrite Instagram/ig_clone.sql (99%)
+ create mode 100644 Instagram/ig_clone_data.sql
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   522cddc..dc23d4c  main -> main
+[main 4d753a1] session as of  2022-Jan-09:21:56:52 utc
+ 3 files changed, 231 insertions(+), 8 deletions(-)
+ create mode 100644 my_sessions_log3.txt
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   dc23d4c..4d753a1  main -> main
+[main f9b022d] session as of  2022-Jan-10:06:07:37 utc
+ 3 files changed, 138 insertions(+)
+ create mode 100644 nodejs-apps/app.js
+ create mode 100644 nodejs-apps/package-lock.json
+ create mode 100644 nodejs-apps/package.json
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   4d753a1..f9b022d  main -> main
+[main 3d28b39] session as of  2022-Jan-10:06:08:48 utc
+ 5 files changed, 325 insertions(+)
+ create mode 100644 Instagram/ig_clone_db_model.png
+ create mode 100644 my_bash_logs/bash_log0.txt
+ create mode 100644 my_bash_logs/bash_log1.txt
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   f9b022d..3d28b39  main -> main
+[main 1d04c47] session as of  2022-Jan-11:05:47:00 utc
+ 7 files changed, 800 insertions(+), 16 deletions(-)
+ rewrite my_bash_logs/bash_log1.txt (97%)
+ create mode 100644 my_bash_logs/bash_log2.txt
+ create mode 100644 my_sessions_log4.txt
+ create mode 100644 nodejs-apps/schema.sql
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   3d28b39..1d04c47  main -> main
+[main 125e4c8] session as of  2022-Feb-19:23:05:07 utc
+ 8 files changed, 539 insertions(+), 52 deletions(-)
+ create mode 100644 join_us_db_exercise.sql
+ rewrite my_bash_logs/bash_log1.txt (65%)
+ create mode 100644 my_bash_logs/bash_log3.txt
+ create mode 100644 my_sessions_log5.txt
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   1d04c47..125e4c8  main -> main
+[main cb19337] session as of  2022-Feb-19:23:23:19 utc
+ 2 files changed, 578 insertions(+)
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   125e4c8..cb19337  main -> main
+[main 9ac32be] session as of  2022-Feb-19:23:39:16 utc
+ 3 files changed, 3676 insertions(+), 1 deletion(-)
+ create mode 100644 my_bash_logs/bash_log4.txt
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   cb19337..9ac32be  main -> main
+[main ccd4e59] session as of  2022-Feb-20:01:34:40 utc
+ 3 files changed, 497 insertions(+)
+ create mode 100644 nodejs-apps/JoinUs/app.js
+ create mode 100644 nodejs-apps/JoinUs/package-lock.json
+ create mode 100644 nodejs-apps/JoinUs/package.json
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   9ac32be..ccd4e59  main -> main
+[main 5145132] session as of  2022-Feb-20:01:36:14 utc
+ 4 files changed, 1518 insertions(+), 5 deletions(-)
+ rewrite goorm.manifest (61%)
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   ccd4e59..5145132  main -> main
+[main bac57cc] session as of  2022-Feb-20:03:28:42 utc
+ 5 files changed, 141 insertions(+), 14 deletions(-)
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   5145132..bac57cc  main -> main
+[main de7450e] session as of  2022-Feb-20:20:56:03 utc
+ 10 files changed, 357 insertions(+), 30 deletions(-)
+ create mode 100644 my_bash_logs/bash_log5.txt
+ create mode 100644 my_sessions_log6.txt
+ create mode 100644 nodejs-apps/JoinUs/views/home.ejs
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   bac57cc..de7450e  main -> main
+[main 6e2577e] session as of  2022-Feb-21:06:25:26 utc
+ 8 files changed, 406 insertions(+), 17 deletions(-)
+ create mode 100644 my_bash_logs/bash_log6.txt
+ create mode 100644 my_bash_logs/bash_log7.txt
+ rewrite my_sessions_log6.txt (100%)
+ create mode 100644 my_sessions_log7.txt
+ create mode 100644 nodejs-apps/JoinUs/public/app.css
+ rewrite nodejs-apps/JoinUs/views/home.ejs (100%)
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   de7450e..6e2577e  main -> main
+[main 3d602d5] session as of  2022-Feb-21:07:23:43 utc
+ 5 files changed, 192 insertions(+)
+ create mode 100644 Instagram/ig_trigger.sql
+ create mode 100644 triggers/users.sql
+ create mode 100644 triggers/users_trigger.sql
+To https://github.com/Ze-sys/MySQLUltimateBootCamp.git/
+   6e2577e..3d602d5  main -> main

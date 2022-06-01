@@ -1,0 +1,326 @@
+1. Course Introduction					      
+2. Instructor Introduction(s)				      
+3. Syllabus Walkthrough and Prerequisites		      
+4. Note about SQL Editor				      
+5. Your First 5 Minutes of SQL - Let's Get Coding!	      
+6. CODE: Your First 5 Minutes of SQL			      
+7. How The Course Works					      
+8. Section Introduction					      
+9. What Is a Database?					      
+10. SQL Vs. MySQL					      
+11. Important note about the next lecture		      
+12. Installation Overview - WATCH BEFORE INSTALLING	      
+13. Now using GoormIDE instead of Cloud9		      
+14. GoormIDE Registration IMPORTANT - PLEASE READ!!!	      
+15. MySQL Tips to Make Your Life Easier			      
+16. Mac Installation					      
+17. CODE: Mac Installation				      
+18. Windows Installation				      
+19. Section 3 Introduction				      
+20. Creating Databases					      
+21. CODE: Creating Databases				      
+22. Dropping Databases					      
+23. CODE: Dropping Databases				      
+24. Using Databases					      
+25. CODE: Using Databases				      
+26. Introduction to Tables				      
+27. The Basic Datatypes					      
+28. Note about INT max size				      
+29. Basic Datatypes Challenge				      
+30. Basic Datatypes Challenge - Solution		      
+31. Creating Your Own Tables				      
+32. CODE: Creating Your Own Tables			      
+33. How Do We Know It Worked?				      
+34. CODE: How Do We Know It Worked?			      
+35. Dropping Tables					      
+36. CODE: Dropping Tables				      
+37. Creating Your Own Tables Challenge			      
+38. CODE: Creating Your Own Tables Challenge		      
+39. Section 4 Introduction				      
+40. Inserting Data					      
+41. CODE: Inserting Data				      
+42. Super Quick Intro To SELECT				      
+43. CODE: Super Quick Intro To SELECT			      
+44. Multiple INSERT					      
+45. CODE: Multiple Insert				      
+46. INSERT Challenges					      
+47. Note about using quotes inside of inserted values	      
+48. INSERT Challenges Solution				      
+49. CODE: INSERT Challenges Solution			      
+50. NOTE: MySQL Warnings				      
+51. MySQL Warnings					      
+52. CODE: MySQL Warnings				      
+53. NULL and NOT_NULL					      
+54. CODE: NULL and NOT NULL				      
+55. Setting Default Values				      
+56. CODE: Setting Default Values			      
+57. A Primer On Primary Keys				      
+58. CODE: A Primer on Primary Keys			      
+59. Table Constraints Exercise				      
+60. Table Constraints Exercise Solution			      
+61. CODE: Table Constraints Exercise Solution		      
+62. Section 5 Introduction				      
+63. Introduction to CRUD				      
+64. CODE: Introduction to CRUD				      
+65. Preparing Our Data					      
+66. CODE: Preparing Our Data				      
+67. Official Introduction to SELECT			      
+68. CODE: Official Introduction to SELECT		      
+69. Introduction to WHERE				      
+70. CODE: Introduction to WHERE				      
+71. SELECT Challenges					      
+72. SELECT Challenges Solution				      
+73. CODE: SELECT Challenges Solution			      
+74. Introduction to Aliases				      
+75. CODE: Introduction to Aliases			      
+76. The UPDATE Command					      
+77. CODE: The UPDATE Command				      
+78. UPDATE Challenges					      
+79. UPDATE Challenges Solution				      
+80. CODE: UPDATE Challenges Solution			      
+81. Introduction to DELETE				      
+82. CODE: Introduction to DELETE			      
+83. DELETE Challenges					      
+84. DELETE Challenges Solution				      
+85. CODE: DELETE Challenges Solution			      
+86. Section 6 Introduction				      
+87. CRUD Exercise Overview				      
+88. CRUD Exercise Create Solution			      
+89. CODE: CRUD Exercise Create Solution			      
+90. CRUD Exercise Read Solution				      
+91. CODE: CRUD Exercise Read Solution			      
+92. CRUD Exercise Update Solution			      
+93. CODE: CRUD Exercise Update Solution			      
+94. CRUD Exercise Delete Solution			      
+95. CODE: CRUD Exercise Delete Solution			      
+96. Section 7 Introduction				      
+97. Important Note about Running SQL Files (please read)      
+98. Running SQL Files					      
+99. CODE: Running SQL Files				      
+100. Loading Our Book Data				      
+101. CODE: Loading Our Book Data			      
+102. Working with CONCAT				      
+103. CODE: Working With CONCAT				      
+104. Introducing SUBSTRING				      
+105. CODE: Introducing SUBSTRING			      
+106. Introducing REPLACE				      
+107. CODE: Introducing REPLACE				      
+108. Using REVERSE					      
+109. CODE: Using REVERSE				      
+110. Working with CHAR LENGTH				      
+111. CODE: Working with CHAR LENGTH			      
+112. Changing Case with UPPER and LOWER			      
+113. CODE: Changing Case with UPPER and LOWER		      
+114. Note about string functions			      
+115. String Function Challenges				      
+116. String Function Challenges Solution		      
+117. CODE: String Function Challenges Solution		      
+118. Section 8 Introduction				      
+119. Seed Data: Adding A Couple New Books		      
+120. CODE: Seed Data: Adding A Couple New Books		      
+121. Using DISTINCT					      
+122. CODE: Using DISTINCT				      
+123. Sorting Data with ORDER BY				      
+124. CODE: Sorting Data with ORDER BY			      
+125. Using LIMIT					      
+126. CODE: Using LIMIT					      
+127. Better Searches with LIKE				      
+128. CODE: Better Searches with LIKE			      
+129. LIKE Part 2: More Wildcards			      
+130. CODE: LIKE Part 2: More Wildcards			      
+131. Refining Selections Exercises			      
+132. Refining Selections Exercises Solution		      
+133. CODE: Refining Selections Exercises Solution	      
+134. Section 9 Introduction				      
+135. The Count Function					      
+136. CODE: The Count Function				      
+137. The Joys of Group By				      
+138. Note about SQL Mode only_full_group_by		      
+139. CODE: The Joys of Group By				      
+140. Min and Max Basics					      
+141. CODE: MIN and MAX Basics				      
+142. SUBQUERIES - A Problem with Min and Max		      
+143. CODE: A Problem with Min and Max			      
+144. Using Min and Max with Group By			      
+145. CODE: Using Min and Max with Group By		      
+146. The Sum Function					      
+147. CODE: The Sum Function				      
+148. The Avg Function					      
+149. CODE: The Avg Function				      
+150. Aggregate Functions Challenges			      
+151. Aggregate Functions Challenges Solution		      
+152. CODE: Aggregate Functions Challenges Solution	      
+153. Section 10 Introduction				      
+154. CHAR and VARCHAR					      
+155. Note about CHAR and VARCHAR			      
+156. CODE: CHAR and VARCHAR				      
+157. DECIMAL						      
+158. CODE: DECIMAL					      
+159. FLOAT and DOUBLE					      
+160. CODE: FLOAT and DOUBLE				      
+161. Note about setting the timezone in Cloud9		      
+162. DATE, TIME, and DATETIME				      
+163. Creating Our DATE data				      
+164. CODE: Creating Our DATE data			      
+165. CURDATE, CURTIME, and NOW				      
+166. Note about formatting dates			      
+167. Formatting Dates					      
+168. CODE: Formatting Dates				      
+169. Date Math						      
+170. CODE: Date Math					      
+171. Working with TIMESTAMPS				      
+172. CODE: Working with TIMESTAMPS			      
+173. Data Types Exercises				      
+174. Data Types Exercises Solution			      
+175. CODE: Data Types Exercises Solution		      
+176. Section 11 Introduction				      
+177. Not Equal						      
+178. CODE: Not Equal					      
+179. Not Like						      
+180. CODE: Not Like					      
+181. Greater Than					      
+182. CODE: Greater Than					      
+183. Less Than						      
+184. CODE: Less Than					      
+185. Logical AND					      
+186. CODE: Logical AND					      
+187. Logical OR						      
+188. CODE: Logical OR					      
+189. Between						      
+190. CODE: Between					      
+191. In And Not In					      
+192. CODE: In And Not In				      
+193. Case Statements					      
+194. CODE: Case Statements				      
+195. Logical Operators Exercises			      
+196. Logical Operators Exercises Solution		      
+197. CODE: Logical Operators Exercises Solution		      
+198. Section 12 Introduction				      
+199. Real World Data Is Messy				      
+200. Types of Data Relationships			      
+201. One To Many: The Basics				      
+202. Working With Foreign Keys				      
+203. CODE: Working With Foreign Keys			      
+204. Cross Join						      
+205. CODE: Cross Joins					      
+206. Inner Join						      
+207. CODE: Inner Joins					      
+208. Left Join						      
+209. CODE: Left Joins					      
+210. Right Joins Pt 1					      
+211. CODE: Right Joins Part 1				      
+212. Right Joins Pt 2					      
+213. CODE: Right Joins Part 2				      
+214. Right and Left Joins: A Common Question		      
+215. CODE: Right and Left Joins FAQ			      
+216. Our First Joins Exercise				      
+217. Our First Joins Exercise SOLUTION			      
+218. CODE: Our First Joins Exercise			      
+219. Our First Joins Exercise SOLUTION PT. 2		      
+220. CODE: Our First Joins Exercise SOLUTION PT. 2	      
+221. Section 13 Introduction				      
+222. Many To Many Basics				      
+223. Creating Our Tables				      
+224. CODE: Creating Our Tables				      
+225. TV Joins Challenge 1				      
+226. CODE: TV Joins Challenge 1 Solution		      
+227. TV Joins Challenge 2				      
+228. CODE: TV Joins Challenge 2 SOLUTION		      
+229. TV Joins Challenge 3				      
+230. CODE: TV Joins Challenge 3 SOLUTION		      
+231. TV Joins Challenge 4				      
+232. CODE: TV Joins Challenge 4 SOLUTION		      
+233. TV Joins Challenge 5				      
+234. CODE: TV Joins Challenge 5 SOLUTION		      
+235. TV Joins Challenge 6				      
+236. CODE: TV Joins Challenge 6 SOLUTION		      
+237. TV Joins Challenge 7				      
+238. CODE: TV Joins Challenge 7 SOLUTION		      
+239. Section 14 Introduction				      
+240. Introduction To Instagram Clone Schema		      
+241. Cloning Instagram's DB: Users Schema		      
+242. CODE: IG Clone Users Schema			      
+243. Cloning Instagram's DB: Photos Schema		      
+244. CODE: IG Clone Photos Schema			      
+245. Cloning Instagram's DB: Comments Schema		      
+246. CODE: IG Clone Comments Schema			      
+247. Cloning Instagram's DB: Likes Schema		      
+248. CODE: IG Clone Likes Schema			      
+249. Cloning Instagram's DB: Followers Schema		      
+250. CODE: IG Clone Followers Schema			      
+251. Note about: Cloning Instagram's DB: Hashtags Part 1      
+252. Cloning Instagram's DB: Hashtags Part 1		      
+253. Cloning Instagram's DB: Hashtags Part 2		      
+254. CODE: IG Clone Hashtags Schema			      
+255. CODE: Complete IG Clone Schema			      
+256. Section 15 Introduction				      
+257. Note about Loading The JUMBO dataset		      
+258. Loading The JUMBO dataset				      
+259. The Instagram Clone DATASET			      
+260. Instagram Clone Challenge 1			      
+261. Instagram Challenge 1 Solution CODE		      
+262. Instagram Clone Challenge 2			      
+263. Instagram Challenge 2 Solution CODE		      
+264. Instagram Clone Challenge 3			      
+265. Instagram Challenge 3 Solution CODE		      
+266. Instagram Clone Challenge 4			      
+267. Instagram Challenge 4 Solution CODE		      
+268. Instagram Clone Challenge 5			      
+269. Instagram Challenge 5 Solution CODE		      
+270. Instagram Clone Challenge 6			      
+271. Instagram Challenge 6 Solution CODE		      
+272. Note about Instagram Clone Challenge 7		      
+273. Instagram Clone Challenge 7			      
+274. Instagram Challenge 7 Solution CODE		      
+275. Note about Introducing Node			      
+276. Section 16 Introduction				      
+277. MySQL and Other Languages				      
+278. BUT WHAT ABOUT PHP					      
+279. Introduction to JOIN US app			      
+280. Note about Setting Up Cloud9 for Node		      
+281. 5 Minute NodeJS Crash Course			      
+282. CODE: 5 Minute Node Crash Course			      
+283. Note about Faker install				      
+284. Introduction to NPM and Faker			      
+285. CODE: Introduction to NPM and Faker		      
+286. Introducing the MySQL Package			      
+287. Note about connecting Node to MySQL		      
+288. Connecting Node to MySQL				      
+289. CODE: Connecting Node to MySQL			      
+290. Creating Our Users Table				      
+291. CODE: Creating Our Users Table			      
+292. Selecting Using Node				      
+293. CODE: Selecting Using Node				      
+294. Inserting Using Node				      
+295. CODE: Inserting Using Node				      
+296. Some MySQL/Node Magic				      
+297. Bulk Inserting 500 Users - Finally!		      
+298. CODE: Bulk Inserting 500 Users			      
+299. 500 Users Exercises				      
+300. 500 Users Exercises Solutions			      
+301. CODE: 500 Users Exercises Solutions		      
+302. Section 17 Introduction				      
+303. Join Us Completed CODE				      
+304. Introducing Express				      
+305. NPM Init and package.json files			      
+306. Note about Our First Simple Web App		      
+307. Our First Simple Web App				      
+308. CODE: Our First Simple Web App			      
+309. Adding Multiple Routes				      
+310. CODE: Adding Multiple Routes			      
+311. Connecting Express and MySQL			      
+312. CODE: Connecting Express and MySQL			      
+313. Adding EJS Templates				      
+314. CODE: Adding EJS Templates				      
+315. Connecting The Form				      
+316. CODE: Connecting the Form				      
+317. Styling Part 1					      
+318. CODE: HTML AND CSS FILES				      
+319. Styling Part 2					      
+320. Introduction to Database Triggers			      
+321. Writing Our First Trigger Part 1			      
+322. Writing Our First Trigger Part 2			      
+323. Note about next lecture				      
+324. Preventing Instagram Self-Follows With Triggers	      
+325. Creating Logger Triggers				      
+326. Managing Triggers And A Warning			      

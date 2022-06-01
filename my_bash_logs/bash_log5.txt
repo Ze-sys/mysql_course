@@ -1,0 +1,56 @@
+Script started on 2022-02-20 19:50:42+0000
+]0;root@goorm: /workspace/z[01;32mroot@goorm[00m:[01;34m/workspace/z[00m# cd nodejs-apps/jo[K[KJoinUs/
+]0;root@goorm: /workspace/z/nodejs-apps/JoinUs[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps/JoinUs[00m# ls
+app.js  [0m[01;34mnode_modules[0m  package.json  package-lock.json  [01;34mviews[0m
+]0;root@goorm: /workspace/z/nodejs-apps/JoinUs[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps/JoinUs[00m# [H[2J]0;root@goorm: /workspace/z/nodejs-apps/JoinUs[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps/JoinUs[00m# node app.js 
+App listening at port [33m3000[39m
+^L  ^C
+]0;root@goorm: /workspace/z/nodejs-apps/JoinUs[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps/JoinUs[00m# [H[2J]0;root@goorm: /workspace/z/nodejs-apps/JoinUs[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps/JoinUs[00m# cd ../../
+]0;root@goorm: /workspace/z[01;32mroot@goorm[00m:[01;34m/workspace/z[00m# ls
+[0m[01;34mInstagram[0m  [01;32mcommit.sh[0m        goorm.manifest           [01;34mmy_bash_logs[0m        my_sessions_log.txt   my_sessions_log2.txt  my_sessions_log4.txt  [01;34mnodejs-apps[0m  q1.sql
+README.md  commits_log.txt  join_us_db_exercise.sql  my_session_log.txt  my_sessions_log1.txt  my_sessions_log3.txt  my_sessions_log5.txt  q.sql
+]0;root@goorm: /workspace/z[01;32mroot@goorm[00m:[01;34m/workspace/z[00m# tail my_sessions_log5.txt 
+3 rows in set (0.01 sec)
+
+mysql> SELECT 'This ends the MySQL focus of the course. Moving on to the more exciting topic of the course, which is web app development using node.js!' as note;
++------------------------------------------------------------------------------------------------------------------------------------------+
+| note                                                                                                                                     |
++------------------------------------------------------------------------------------------------------------------------------------------+
+| This ends the MySQL focus of the course. Moving on to the more exciting topic of the course, which is web app development using node.js! |
++------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+]0;root@goorm: /workspace/z[01;32mroot@goorm[00m:[01;34m/workspace/z[00m# [H[2J]0;root@goorm: /workspace/z[01;32mroot@goorm[00m:[01;34m/workspace/z[00m# ls
+[0m[01;34mInstagram[0m  [01;32mcommit.sh[0m        goorm.manifest           [01;34mmy_bash_logs[0m        my_sessions_log.txt   my_sessions_log2.txt  my_sessions_log4.txt  [01;34mnodejs-apps[0m  q1.sql
+README.md  commits_log.txt  join_us_db_exercise.sql  my_session_log.txt  my_sessions_log1.txt  my_sessions_log3.txt  my_sessions_log5.txt  q.sql
+]0;root@goorm: /workspace/z[01;32mroot@goorm[00m:[01;34m/workspace/z[00m# cd nodejs-apps/
+]0;root@goorm: /workspace/z/nodejs-apps[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps[00m# ls
+[0m[01;34mJoinUs[0m  app.js  [01;34mnode_modules[0m  package-lock.json  package.json  schema.sql
+]0;root@goorm: /workspace/z/nodejs-apps[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps[00m# mysql-ctl cli
+ * Stopping MySQL database server mysqld
+   ...done.
+
+MySQL 5.7 database added.  Please make note of these credentials:
+
+       Root User: root
+   Database Name: mysql
+
+ * Starting MySQL database server mysqld
+No directory, logging in with HOME=/
+   ...done.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 4
+Server version: 5.7.36-0ubuntu0.18.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> 
+mysql> tee ../my_sessions_log6.txtmysql> use join_us;[12Dtee ../my_sessions_log6.txt[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K/myse[K[K_sessions_lot6.txt[P6[4hg[4l6
+Logging to file '../my_sessions_log6.txt'
+mysql> [H[2Jmysql> [H[2Jmysql> tee ../my_sessions_log6.txtmysql> tee ../my_sessions_log6.tx[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[H[2Jmysql> teuse join_us;[12D;[Kshow databases[14D;[Kshow dbs[8D;[Kshow databases[14D;[Kuse join_us;[K[K[K[K[K[K[K[K[K[K[Kseelc

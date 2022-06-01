@@ -1,0 +1,461 @@
+Script started on 2022-01-11 04:47:02+0000
+manpath: can't set the locale; make sure $LC_* and $LANG are correct
+]0;root@goorm: /workspace/z/nodejs-apps[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps[00m# [K]0;root@goorm: /workspace/z/nodejs-apps[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps[00m# script ../z/my_bash_logs/bash_log1.txt [Kscript ../z/my_bash_logs/bash_log1.txt [K[H[2J]0;root@goorm: /workspace/z/nodejs-apps[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps[00m# ls  [K]0;root@goorm: /workspace/z/nodejs-apps[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps[00m# [K]0;root@goorm: /workspace/z/nodejs-apps[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps[00m# touch shce    schema      schema.sql
+]0;root@goorm: /workspace/z/nodejs-apps[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps[00m# MY  msy   mysql-ctl cli
+ * Stopping MySQL database server mysqld
+   ...done.
+
+MySQL 5.7 database added.  Please make note of these credentials:
+
+       Root User: root
+   Database Name: mysql
+
+ * Starting MySQL database server mysqld
+No directory, logging in with HOME=/
+   ...done.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 4
+Server version: 5.7.36-0ubuntu0.18.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use join_us;
+Database changed
+mysql> source shcem[K[K[K[K[Kschema.sql[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ktouch[K[K[K[K[Ktee my_sessions_log4.txt[4h.[4lm[4h.[4lm[4h/[4lm
+Logging to file '../my_sessions_log4.txt'
+mysql> source schema.sql[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kuse join_us;
+Database changed
+mysql> source schema.sql;
+mysql> desc users;
+ERROR 1146 (42S02): Table 'join_us.users' doesn't exist
+mysql> show tables;
+Empty set (0.06 sec)
+
+mysql> -- Ok . didn't sae [Kve schema.sql. Try now.
+mysql> -- Ok. didn't save schema.sql. Try now.[39Dshow tables;[K[12Ddesc users;[K[11Dsource schema.sql;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TIMESTAMP DEFAULT NOW()    
+)' at line 3
+mysql> source schema.sql;
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> source schema.sql;[18D-- Ok. didn't save schema.sql. Try now.[39Dshow tables;[K[12Ddesc users;[K[11Dshow tables;
++-------------------+
+| Tables_in_join_us |
++-------------------+
+| users             |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> show tables;[11Dource schema.sql;[18D-- Ok. didn't save schema.sql. Try now.[39Dshow tables;[K[12Ddesc users;[K
++------------+--------------+------+-----+-------------------+-------+
+| Field      | Type         | Null | Key | Default           | Extra |
++------------+--------------+------+-----+-------------------+-------+
+| email      | varchar(255) | NO   | PRI | NULL              |       |
+| created_at | timestamp    | NO   |     | CURRENT_TIMESTAMP |       |
++------------+--------------+------+-----+-------------------+-------+
+2 rows in set (0.00 sec)
+
+mysql> inser[K[K[K[K[KINSERT INTO users ()e)m)a)i);))[Kl)) VALUES (""K"A"T"I"E""[K"[K"[K"[Ka"t"i"e"3"7"@"y"a"h"o"o"."c"o"m"", '''[K[K""G"e"o"r"e""[K"[K"[K"[Ke"o"r"g"e"@"g"m"a"i"l"."c"o"m"[4hC[4lG[4hu[4lG[4hr[4lG[4hu[4lG[4hi[4lG[4ho[4lG[4hs[4lG[PG[PG[PG[PG[PG[PG[4ho[4lG[4hu[4lG[PG[PG[PGGeorge[4h8[4l@[4h8[4l@@gmail.com";);
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> INSERT INTO users (email) VALUES ("Katie37@yahoo.com", "George88@gmail.com");[4h)[4l,, [4h([4l"
+Query OK, 2 rows affected (0.07 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from users;
++--------------------+---------------------+
+| email              | created_at          |
++--------------------+---------------------+
+| George88@gmail.com | 2022-01-11 05:03:08 |
+| Jakson59@yahoo.com | 2022-01-11 05:15:12 |
+| Katie37@yahoo.com  | 2022-01-11 05:03:08 |
++--------------------+---------------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from users;
++---------------------+---------------------+
+| email               | created_at          |
++---------------------+---------------------+
+| George88@gmail.com  | 2022-01-11 05:03:08 |
+| Jakson59@yahoo.com  | 2022-01-11 05:15:12 |
+| jeanny666@gmail.com | 2022-01-11 05:24:49 |
+| jeanny777@gmail.com | 2022-01-11 05:25:17 |
+| Katie37@yahoo.com   | 2022-01-11 05:03:08 |
++---------------------+---------------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from users; ;o;r;d;e;r;;[K;[K;[K;[K;[Ko;r;d;e;r; ;b;y; ;c;r;e;a;t;e;d;_;a;t; ;l;i;m;i;m;t; ;;[K;[K;[K;[K;[K;[K;[Kd;e;s;c; ;l;i;m;i;t; ;1;
++--------------------------+---------------------+
+| email                    | created_at          |
++--------------------------+---------------------+
+| Triston_Hammes@gmail.com | 2022-01-11 05:27:40 |
++--------------------------+---------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from users order by created_at desc limit 1;
++--------------------------+---------------------+
+| email                    | created_at          |
++--------------------------+---------------------+
+| Triston_Hammes@gmail.com | 2022-01-11 05:27:40 |
++--------------------------+---------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from users order by created_at desc limit 1;[P [P [P [P 
++------------------------+---------------------+
+| email                  | created_at          |
++------------------------+---------------------+
+| Anais_Kris@hotmail.com | 2021-09-25 12:53:11 |
++------------------------+---------------------+
+1 row in set (0.00 sec)
+
+mysql> [H[2Jmysql> 
+mysql> 
+mysql> select * from users order by created_at  limit 1;;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K[4hc[4l*[4ho[4l*[4hu[4l*[4hn[4l*[4ht[4l*[4h([4l**[4h)[4l 
++----------+
+| count(*) |
++----------+
+|       11 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> after[K[K[K[K[K-- after bulk insertion of 500 users
+mysql> -- after bulk insertion of 500 users[36Dselect count(*) from users;[K
++----------+
+| count(*) |
++----------+
+|      511 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> -- Boom!
+mysql> -- Gonna g[Kdrop table now n[Kand create again with just 500 usesr[K[K[K[K[Kusers
+mysql> DROP TA[KABLE users;
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> source schema.sql
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> desc users;
++------------+--------------+------+-----+-------------------+-------+
+| Field      | Type         | Null | Key | Default           | Extra |
++------------+--------------+------+-----+-------------------+-------+
+| email      | varchar(255) | NO   | PRI | NULL              |       |
+| created_at | timestamp    | NO   |     | CURRENT_TIMESTAMP |       |
++------------+--------------+------+-----+-------------------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select from users;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from users' at line 1
+mysql> select from users;[4h*[4lf[4h [4lf
+Empty set (0.08 sec)
+
+mysql> select * from users;[13D[2Pf[10C[18D[7Pdesc[7C[11Dsource schema.sql[17DDROP TABLE users;[17D-- Gonna drop table now and create again with just 500 users[57DBoom![K[8Dselect count(*) from users;
++----------+
+| count(*) |
++----------+
+|        0 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> -- after bulk insert
+mysql> -- after bulk insert[20Dselect count(*) from users;
++----------+
+| count(*) |
++----------+
+|      500 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from users;[27D-- after bulk insert[K[20Dselect count(*) from users;[20D[7P*[12C ;l;i;m;i;t; ;5;
++------------------------------+---------------------+
+| email                        | created_at          |
++------------------------------+---------------------+
+| Abdullah.Sporer@hotmail.com  | 2021-09-21 17:45:30 |
+| Adrien.Kautzer64@gmail.com   | 2021-02-01 01:22:40 |
+| Afton.Torp@hotmail.com       | 2021-05-27 16:02:39 |
+| Afton_Smitham63@gmail.com    | 2021-05-26 23:05:28 |
+| Aglae.Konopelski84@gmail.com | 2021-09-04 11:27:13 |
++------------------------------+---------------------+
+5 rows in set (0.00 sec)
+
+mysql> seelc[K[K[K[K[KSELECT CRA[K[K[Kcrea[K[K[K[K created at[K[K_at from users ORDER BY 1[P [P [P [P [4hF[4l [4hR[4l [4hO[4l [4hM[4l  users ORDER BY 1 DESC LIMIT 1;
++---------------------+
+| created_at          |
++---------------------+
+| 2022-01-10 08:07:56 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT created_at FROM users ORDER BY 1 DESC LIMIT 1;[4hD[4lc[4hA[4lc[4hT[4lc[4hE[4lc[4h([4lccreated_at[4h,[4l [4h'[4l [4h'[4l [4h)[4l [4h%[4l'[4hB[4l'[4h [4l'[4hD[4l'[P'[4h%[4l'[4hD[4l'[4h [4l'[4h%[4l'[4hY[4l'[P'[4hy[4l'
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''%B %D %y') FROM users ORDER BY 1 DESC LIMIT 1' at line 1
+mysql> SELECT DATE(created_at,'%B %D %y') FROM users ORDER BY 1 DESC LIMIT 1;'[P)[P)[P)[P)[P)[P)[P)[P)[P)[P)[P)
++------------------+
+| DATE(created_at) |
++------------------+
+| 2022-01-10       |
++------------------+
+1 row in set (0.06 sec)
+
+mysql> SELECT DATE(created_at) FROM users ORDER BY 1 DESC LIMIT 1;ted_atE[P([P([P([P([4hd[4l([4ha[4l([4ht[4l([4he[4l([4h_[4l([4hf[4l([4ho[4l([4hr[4l([4hm[4l([4ha[4l([4ht[4l((created_at[4h,[4l)[4h [4l)[4h'[4l)[4h'[4l)[4h%[4l'[4hD[4l'[P'[4hB[4l'[4h [4l'[4h%[4l'[4hD[4l'[4h [4l'[4h%[4l'[4hY[4l'
++-------------------------------------+
+| date_format(created_at, '%B %D %Y') |
++-------------------------------------+
+| B 9th 2021                          |
++-------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT date_format(created_at, '%B %D %Y') FROM users ORDER BY 1 DESC LIMIT 1;[P [4hB[4l [P [4hb[4l 
++-------------------------------------+
+| date_format(created_at, '%b %D %Y') |
++-------------------------------------+
+| Sep 9th 2021                        |
++-------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT date_format(created_at, '%b %D %Y') FROM users ORDER BY 1 DESC LIMIT 1;[4hc[4ld[4ho[4ld[4hn[4ld[4hc[4ld[4ha[4ld[4ht[4ld[4h([4ld[4h [4ld[4h'[4ld[4hT[4ld[4hh[4ld[4he[4ld[4h [4ld[4he[4ld[4ha[4ld[4hr[4ld[4hl[4ld[4hi[4ld[4he[4ld[4hs[4ld[4ht[4ld[4h [4ldd[4hd[4la[4ha[4ld[4ht[4ld[4he[4ld[4h [4ld[4ha[4ld[4h [4ld[4hu[4ld[4hs[4ld[4he[4ld[4hr[4ld[4h [4ld[4hs[4ld[4hi[4ld[4hg[4ld[4hn[4ld[4he[4ldd[4hd[4la[4h [4ld[4hu[4l[69C1 ;[A[55C[4hp[4l[68C[K ;1;[A[55C[4h [4ld[66CT1 1;[A[55C[4ht[4l[66CI T 1;[A[55C[4ho[4l[65CMTIT 1;[A[55C[4h [4l[64CII[4hM[4lI[A[59C[P[65CMM[PI[A[59C[P[66CIIT 1;[K[A[55C[P[67CTT 1;[K[A[55C[Pd[67C  1;[K[A[55C[P[68C 11;[K[A[55C[P[70C;;[K[A[55C[Pd[70C  [K[A[54C[Pa[Pd[Pd[Pd[Pd[Pd[4hj[4ld[4ho[4ld[4hi[4ld[4hn[4ld[4he[4ldd[4hd[4la[4h [4ld[4hu[4l[69C1 ;[A[55C[4hs[4l[68C[K ;1;[A[55C[4h [4ld[66CT1 1;[A[55C[4hw[4l[66CI T 1;[A[55C[4ha[4l[65CMTIT 1;[A[55C[4hs[4l[64CII[4hM[4lI[A[59C[4h [4l[63CLM[4hI[4lM[A[60C[4h:[4l[62C[K I[4hL[4lI[A[61C[4h'[4ld[60CCL[4h [4lL[A[62C[4h,[4l[60CS [4hC[4l [A[63C[4h [4l[61CEC[4hS[4lC[A[62C',date_format(created_at, '%b %D %Y')[4h)[4l[23CDS[4hE[4lS[A[100C [4h [4l[21C[K E[4hD[4lE[A[101C[4ha[4l [20C1D[4h [4lD[A[102C[4hs[4l[20C[K  [4h1[4l [A[103C [4h [4lF[17CY1[4h [4l1[A[104C[4hj[4l[18CB [4hY[4l [A[105C[4ho[4l[17C[K Y[4hB[4lY[A[106C[4hi[4l [15CRB[4h [4lB[A[107C[4hn[4l[15CE [4hR[4l [A[108C[P[16CRR[P [A[108C[P [16C  [PB[A[107C[P[17C BB[PY[A[106C[P[19CYY[P [A[105C[4hd[4l[18CB [4hY[4l [A[105C[4ha[4l[17C[K Y[4hB[4lY[A[106C[4ht[4l [15CRB[4h [4lB[A[107C[4he[4l[15CE [4hR[4l [A[108C [4h [4l[13CDR[4hE[4lR[A[109C[4hi[4l[13CRE[4hD[4lE[A[110C[4hn[4l[12COD[4hR[4lD[A[111C[4hf[4l[11C[K R[4hO[4lR[A[112C[4ho[4l [9CsO[4h [4lO[A[113C[4hr[4l[9Cr [4hs[4l [A[114C [4h [4l[7Ces[4hr[4ls[A[115C[P[8Crr[Ps[A[115C[P[10Css[P [A[114C[10Cs 
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'info FROM users ORDER BY 1 DESC LIMIT 1' at line 1
+mysql> SELECT concat( 'The earliest date a user joined us was : ',date_format(created_at, '%b %D %Y')) as date info FROM users  ORDER BY 1 DESC LIMIT 1;[A[125C[4h'[4l[9Cr [4hs[4l [A[114C [4h'[4l[18Ces[4hr[4ls[A[105C[18Cer
++-------------------------------------------------------+
+| date info                                             |
++-------------------------------------------------------+
+| The earliest date a user joined us was : Sep 9th 2021 |
++-------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT concat( 'The earliest date a user joined us was : ',date_format(created_at, '%b %D %Y')) as 'date info' FROM use rs ORDER BY 1 DESC LIMIT 1;[A[125Cus was : ',date_format(created_at, '%b %D %Y')[4h,[4l[23Csr[4he[4lr[A[100C[4h [4l[22Cue[4hs[4le[A[101C[4hh[4l[21C[K s[4hu[4ls[A[102C[4hi[4l)[19CMu[4h [4lu[A[103C[4hs[4l[19CO [4hM[4l [A[104C[4h [4l[18CRM[4hO[4lM[A[105C[P[19COO[PM[A[105C[P[20CMM[P [A[104C[P)[20C  [Pu[A[103C[P[21C uu[Ps[A[102C[4h'[4l[21C[K s[4hu[4ls[A[102C[4hh[4l)[19CMu[4h [4lu[A[103C[4hi[4l[19CO [4hM[4l [A[104C[P[20CMM[P [A[104C[4he[4l[19CO [4hM[4l [A[104C[4hr[4l[18CRM[4hO[4lM[A[105C[4h/[4l[17CFO[4hR[4lO[A[106C[4hh[4l[16C[K R[4hF[4lR[A[107C[4hi[4l)[14C'F[4h [4lF[A[108C[4hs[4l[14Co [4h'[4l [A[109C[4h [4l[13Cf'[4ho[4l'[A[110C[4he[4l[12Cno[4hf[4lo[A[111C[4hm[4l[11Cif[4hn[4lf[A[112C[4ha[4l[10C[K n[4hi[4ln[A[113C[4hi[4l)[8Cei[4h [4li[A[114C[4hl[4l[8Ct [4he[4l [A[115C[4h [4l[7Cae[4ht[4le[A[116C[4hi[4l[6Cdt[4ha[4lt[A[117C[4hs[4l[5C'a[4hd[4la[A[118C[P[6Cdd[Pa[A[118C[P[7Caa[Pt[A[117C[4ha[4l[6Cdt[4ha[4lt[A[117C[4hd[4l[5C'a[4hd[4la[A[118C[4hd[4l) as[K d[4h'[4ld[A[119C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [15;1H~                                                                                                                                                                        [m[16;152H3,20[10CAll[3;20H[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?1000l[?1002h[?12$pP+q6b32\P+q6b33\P+q6b34\P+q6b35\P+q6b36\[?25l[16;142H^[[3;20H[16;144HP[3;20H[16;145H0[3;20H[16;146H+[3;20H[16;147Hr[3;20H[16;148H2[3;20H[16;149H3[3;20H[16;150H3[3;20H[16;151H2[3;20H[16;142H          [3;20HP+q6b37\P+q6b38\P+q6b39\P+q6b3b\P+q4631\[?25hP+q4632\P+q2531\P+q2638\P+q6b62\P+q6b49\P+q6b44\[?25l[16;142H^[[3;20H[16;144HP[3;20H[16;145H0[3;20H[16;146H+[3;20H[16;147Hr[3;20H[16;142H      [3;20HP+q6b68\P+q4037\P+q6b50\P+q6b4e\[?25hP+q4b31\P+q4b33\P+q4b34\P+q4b35\P+q6b42\[?25l[16;142H^[[3;20H[16;142H  [3;20H[?25h[?25l[16;142H~@k[3;20H[16;142H   [2;12H[16;152H2,12[2;12H[?25h[?25l[16;142H~@k[2;12H[16;142H   [2;11H[16;155H1[2;11H[?25h[?25l[16;142H~@k[2;11H[16;142H   [2;10H[16;155H0[2;10H[?25h[?25l[16;142H~@k[2;10H[16;142H   [2;9H[16;154H9 [2;9H[?25h[?25l[16;142H~@k[2;9H[16;142H   [2;8H[16;154H8[2;8H[?25h[?25l[16;142H~@k[2;8H[16;142H   [2;7H[16;154H7[2;7H[?25h[?25l[16;142H~@k[2;7H[16;142H   [2;6H[16;154H6[2;6H[?25h[?25l[16;142H~@k[2;6H[16;142H   [2;5H[16;154H5[2;5H[?25h[?25l[16;142Hi[2;5H[16;142H [2;5H[16;1H[1m-- INSERT --[m[16;13H[K[16;152H2,5[11CAll[2;5H[?25h[?25l[16;154H4[2;4H[?25h[?25l[16;154H3[2;3H[?25h[?25l[16;154H2[2;2H[?25h[?25l[16;154H1[2;1H[?25h[?25lANG=C.UTF-8[2;12H[K[2;1H[?25h[?25lNG=C.UTF-8[2;11H[K[2;1H[?25h[?25lG=C.UTF-8[2;10H[K[2;1H[?25h[?25l=C.UTF-8[2;9H[K[2;1H[?25h[?25lC.UTF-8[2;8H[K[2;1H[?25h[?25l.UTF-8[2;7H[K[2;1H[?25h[?25lUTF-8[2;6H[K[2;1H[?25h[?25lTF-8[2;5H[K[2;1H[?25h[?25lF-8[2;4H[K[2;1H[?25h[?25l-8[2;3H[K[2;1H[?25h[?25l8[2;2H[K[2;1H[?25h[?25l[2;1H[K[2;1H[?25h[?25l[16;152H3[3;1H[?25h[?25lC_ALL=[31m"en_US.UTF-8"[m[3;20H[K[3;1H[?25h[?25l_ALL=[31m"en_US.UTF-8"[m[3;19H[K[3;1H[?25h[?25lALL=[31m"en_US.UTF-8"[m[3;18H[K[3;1H[?25h[?25lLL=[31m"en_US.UTF-8"[m[3;17H[K[3;1H[?25h[?25lL=[31m"en_US.UTF-8"[m[3;16H[K[3;1H[?25h[?25l=[31m"en_US.UTF-8"[m[3;15H[K[3;1H[?25h[?25l[31m"en_US.UTF-8"[m[3;14H[K[3;1H[?25h[?25len_US.UTF-8"[3;13H[K[3;1H[?25h[?25ln_US.UTF-8"[3;12H[K[3;1H[?25h[?25l_US.UTF-8"[3;11H[K[3;1H[?25h[?25lUS.UTF-8"[3;10H[K[3;1H[?25h[?25lS.UTF-8"[3;9H[K[3;1H[?25h[?25l.UTF-8"[3;8H[K[3;1H[?25h[?25lUTF-8"[3;7H[K[3;1H[?25h[?25lTF-8"[3;6H[K[3;1H[?25h[?25lF-8"[3;5H[K[3;1H[?25h[?25l-8"[3;4H[K[3;1H[?25h[?25l8"[3;3H[K[3;1H[?25h[?25l"[3;2H[K[3;1H[?25h[?25l[3;1H[K[3;1H[?25h[?25l[1m[34m~                                                                                                                                                                        [m[16;152H2[2;1H[?25h[?25l[1m[34m~                                                                                                                                                                        [m[16;152H1,35[1;35H[?25h[16;1H[K[1;34H[?25l[16;142H^[[1;34H[16;142H  [1;35H[16;152H1,34[10CAll[1;34H[?25h[?25l[16;142H:[1;34H[16;142H[K[16;1H:[?2004h[?25hwq![?25l[?1002l[?2004l"/etc/default/locale" 1L, 35C written
+[?2004l[?1l>[?25h[2J[?47l8]0;root@goorm: /workspace/z/nodejs-apps[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps[00m# [H[2J]0;root@goorm: /workspace/z/nodejs-apps[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps[00m# script ../my_bash_logs/bash_log1.txt 
+Script started, file is ../my_bash_logs/bash_log1.txt
+manpath: can't set the locale; make sure $LC_* and $LANG are correct
+]0;root@goorm: /workspace/z/nodejs-apps[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps[00m# [K]0;root@goorm: /workspace/z/nodejs-apps[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps[00m# script ../z/my_bash_logs/bash_log1.txt [Kscript ../z/my_bash_logs/bash_log1.txt [K[H[2J]0;root@goorm: /workspace/z/nodejs-apps[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps[00m# ls  [K]0;root@goorm: /workspace/z/nodejs-apps[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps[00m# [K]0;root@goorm: /workspace/z/nodejs-apps[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps[00m# touch shce    schema      schema.sql
+]0;root@goorm: /workspace/z/nodejs-apps[01;32mroot@goorm[00m:[01;34m/workspace/z/nodejs-apps[00m# MY  msy   mysql-ctl cli
+ * Stopping MySQL database server mysqld
+   ...done.
+
+MySQL 5.7 database added.  Please make note of these credentials:
+
+       Root User: root
+   Database Name: mysql
+
+ * Starting MySQL database server mysqld
+No directory, logging in with HOME=/
+   ...done.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 4
+Server version: 5.7.36-0ubuntu0.18.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use join_us;
+Database changed
+mysql> source shcem[K[K[K[K[Kschema.sql[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ktouch[K[K[K[K[Ktee my_sessions_log4.txt[4h.[4lm[4h.[4lm[4h/[4lm
+Logging to file '../my_sessions_log4.txt'
+mysql> source schema.sql[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kuse join_us;
+Database changed
+mysql> source schema.sql;
+mysql> desc users;
+ERROR 1146 (42S02): Table 'join_us.users' doesn't exist
+mysql> show tables;
+Empty set (0.06 sec)
+
+mysql> -- Ok . didn't sae [Kve schema.sql. Try now.
+mysql> -- Ok. didn't save schema.sql. Try now.[39Dshow tables;[K[12Ddesc users;[K[11Dsource schema.sql;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TIMESTAMP DEFAULT NOW()    
+)' at line 3
+mysql> source schema.sql;
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> source schema.sql;[18D-- Ok. didn't save schema.sql. Try now.[39Dshow tables;[K[12Ddesc users;[K[11Dshow tables;
++-------------------+
+| Tables_in_join_us |
++-------------------+
+| users             |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> show tables;[11Dource schema.sql;[18D-- Ok. didn't save schema.sql. Try now.[39Dshow tables;[K[12Ddesc users;[K
++------------+--------------+------+-----+-------------------+-------+
+| Field      | Type         | Null | Key | Default           | Extra |
++------------+--------------+------+-----+-------------------+-------+
+| email      | varchar(255) | NO   | PRI | NULL              |       |
+| created_at | timestamp    | NO   |     | CURRENT_TIMESTAMP |       |
++------------+--------------+------+-----+-------------------+-------+
+2 rows in set (0.00 sec)
+
+mysql> inser[K[K[K[K[KINSERT INTO users ()e)m)a)i);))[Kl)) VALUES (""K"A"T"I"E""[K"[K"[K"[Ka"t"i"e"3"7"@"y"a"h"o"o"."c"o"m"", '''[K[K""G"e"o"r"e""[K"[K"[K"[Ke"o"r"g"e"@"g"m"a"i"l"."c"o"m"[4hC[4lG[4hu[4lG[4hr[4lG[4hu[4lG[4hi[4lG[4ho[4lG[4hs[4lG[PG[PG[PG[PG[PG[PG[4ho[4lG[4hu[4lG[PG[PG[PGGeorge[4h8[4l@[4h8[4l@@gmail.com";);
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> INSERT INTO users (email) VALUES ("Katie37@yahoo.com", "George88@gmail.com");[4h)[4l,, [4h([4l"
+Query OK, 2 rows affected (0.07 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from users;
++--------------------+---------------------+
+| email              | created_at          |
++--------------------+---------------------+
+| George88@gmail.com | 2022-01-11 05:03:08 |
+| Jakson59@yahoo.com | 2022-01-11 05:15:12 |
+| Katie37@yahoo.com  | 2022-01-11 05:03:08 |
++--------------------+---------------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from users;
++---------------------+---------------------+
+| email               | created_at          |
++---------------------+---------------------+
+| George88@gmail.com  | 2022-01-11 05:03:08 |
+| Jakson59@yahoo.com  | 2022-01-11 05:15:12 |
+| jeanny666@gmail.com | 2022-01-11 05:24:49 |
+| jeanny777@gmail.com | 2022-01-11 05:25:17 |
+| Katie37@yahoo.com   | 2022-01-11 05:03:08 |
++---------------------+---------------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from users; ;o;r;d;e;r;;[K;[K;[K;[K;[Ko;r;d;e;r; ;b;y; ;c;r;e;a;t;e;d;_;a;t; ;l;i;m;i;m;t; ;;[K;[K;[K;[K;[K;[K;[Kd;e;s;c; ;l;i;m;i;t; ;1;
++--------------------------+---------------------+
+| email                    | created_at          |
++--------------------------+---------------------+
+| Triston_Hammes@gmail.com | 2022-01-11 05:27:40 |
++--------------------------+---------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from users order by created_at desc limit 1;
++--------------------------+---------------------+
+| email                    | created_at          |
++--------------------------+---------------------+
+| Triston_Hammes@gmail.com | 2022-01-11 05:27:40 |
++--------------------------+---------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from users order by created_at desc limit 1;[P [P [P [P 
++------------------------+---------------------+
+| email                  | created_at          |
++------------------------+---------------------+
+| Anais_Kris@hotmail.com | 2021-09-25 12:53:11 |
++------------------------+---------------------+
+1 row in set (0.00 sec)
+
+mysql> [H[2Jmysql> 
+mysql> 
+mysql> select * from users order by created_at  limit 1;;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K;[K[4hc[4l*[4ho[4l*[4hu[4l*[4hn[4l*[4ht[4l*[4h([4l**[4h)[4l 
++----------+
+| count(*) |
++----------+
+|       11 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> after[K[K[K[K[K-- after bulk insertion of 500 users
+mysql> -- after bulk insertion of 500 users[36Dselect count(*) from users;[K
++----------+
+| count(*) |
++----------+
+|      511 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> -- Boom!
+mysql> -- Gonna g[Kdrop table now n[Kand create again with just 500 usesr[K[K[K[K[Kusers
+mysql> DROP TA[KABLE users;
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> source schema.sql
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> desc users;
++------------+--------------+------+-----+-------------------+-------+
+| Field      | Type         | Null | Key | Default           | Extra |
++------------+--------------+------+-----+-------------------+-------+
+| email      | varchar(255) | NO   | PRI | NULL              |       |
+| created_at | timestamp    | NO   |     | CURRENT_TIMESTAMP |       |
++------------+--------------+------+-----+-------------------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select from users;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from users' at line 1
+mysql> select from users;[4h*[4lf[4h [4lf
+Empty set (0.08 sec)
+
+mysql> select * from users;[13D[2Pf[10C[18D[7Pdesc[7C[11Dsource schema.sql[17DDROP TABLE users;[17D-- Gonna drop table now and create again with just 500 users[57DBoom![K[8Dselect count(*) from users;
++----------+
+| count(*) |
++----------+
+|        0 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> -- after bulk insert
+mysql> -- after bulk insert[20Dselect count(*) from users;
++----------+
+| count(*) |
++----------+
+|      500 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from users;[27D-- after bulk insert[K[20Dselect count(*) from users;[20D[7P*[12C ;l;i;m;i;t; ;5;
++------------------------------+---------------------+
+| email                        | created_at          |
++------------------------------+---------------------+
+| Abdullah.Sporer@hotmail.com  | 2021-09-21 17:45:30 |
+| Adrien.Kautzer64@gmail.com   | 2021-02-01 01:22:40 |
+| Afton.Torp@hotmail.com       | 2021-05-27 16:02:39 |
+| Afton_Smitham63@gmail.com    | 2021-05-26 23:05:28 |
+| Aglae.Konopelski84@gmail.com | 2021-09-04 11:27:13 |
++------------------------------+---------------------+
+5 rows in set (0.00 sec)
+
+mysql> seelc[K[K[K[K[KSELECT CRA[K[K[Kcrea[K[K[K[K created at[K[K_at from users ORDER BY 1[P [P [P [P [4hF[4l [4hR[4l [4hO[4l [4hM[4l  users ORDER BY 1 DESC LIMIT 1;
++---------------------+
+| created_at          |
++---------------------+
+| 2022-01-10 08:07:56 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT created_at FROM users ORDER BY 1 DESC LIMIT 1;[4hD[4lc[4hA[4lc[4hT[4lc[4hE[4lc[4h([4lccreated_at[4h,[4l [4h'[4l [4h'[4l [4h)[4l [4h%[4l'[4hB[4l'[4h [4l'[4hD[4l'[P'[4h%[4l'[4hD[4l'[4h [4l'[4h%[4l'[4hY[4l'[P'[4hy[4l'
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''%B %D %y') FROM users ORDER BY 1 DESC LIMIT 1' at line 1
+mysql> SELECT DATE(created_at,'%B %D %y') FROM users ORDER BY 1 DESC LIMIT 1;'[P)[P)[P)[P)[P)[P)[P)[P)[P)[P)[P)
++------------------+
+| DATE(created_at) |
++------------------+
+| 2022-01-10       |
++------------------+
+1 row in set (0.06 sec)
+
+mysql> SELECT DATE(created_at) FROM users ORDER BY 1 DESC LIMIT 1;ted_atE[P([P([P([P([4hd[4l([4ha[4l([4ht[4l([4he[4l([4h_[4l([4hf[4l([4ho[4l([4hr[4l([4hm[4l([4ha[4l([4ht[4l((created_at[4h,[4l)[4h [4l)[4h'[4l)[4h'[4l)[4h%[4l'[4hD[4l'[P'[4hB[4l'[4h [4l'[4h%[4l'[4hD[4l'[4h [4l'[4h%[4l'[4hY[4l'
++-------------------------------------+
+| date_format(created_at, '%B %D %Y') |
++-------------------------------------+
+| B 9th 2021                          |
++-------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT date_format(created_at, '%B %D %Y') FROM users ORDER BY 1 DESC LIMIT 1;[P [4hB[4l [P [4hb[4l 
++-------------------------------------+
+| date_format(created_at, '%b %D %Y') |
++-------------------------------------+
+| Sep 9th 2021                        |
++-------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT date_format(created_at, '%b %D %Y') FROM users ORDER BY 1 DESC LIMIT 1;[4hc[4ld[4ho[4ld[4hn[4ld[4hc[4ld[4ha[4ld[4ht[4ld[4h([4ld[4h [4ld[4h'[4ld[4hT[4ld[4hh[4ld[4he[4ld[4h [4ld[4he[4ld[4ha[4ld[4hr[4ld[4hl[4ld[4hi[4ld[4he[4ld[4hs[4ld[4ht[4ld[4h [4ldd[4hd[4la[4ha[4ld[4ht[4ld[4he[4ld[4h [4ld[4ha[4ld[4h [4ld[4hu[4ld[4hs[4ld[4he[4ld[4hr[4ld[4h [4ld[4hs[4ld[4hi[4ld[4hg[4ld[4hn[4ld[4he[4ldd[4hd[4la[4h [4ld[4hu[4l[69C1 ;[A[55C[4hp[4l[68C[K ;1;[A[55C[4h [4ld[66CT1 1;[A[55C[4ht[4l[66CI T 1;[A[55C[4ho[4l[65CMTIT 1;[A[55C[4h [4l[64CII[4hM[4lI[A[59C[P[65CMM[PI[A[59C[P[66CIIT 1;[K[A[55C[P[67CTT 1;[K[A[55C[Pd[67C  1;[K[A[55C[P[68C 11;[K[A[55C[P[70C;;[K[A[55C[Pd[70C  [K[A[54C[Pa[Pd[Pd[Pd[Pd[Pd[4hj[4ld[4ho[4ld[4hi[4ld[4hn[4ld[4he[4ldd[4hd[4la[4h [4ld[4hu[4l[69C1 ;[A[55C[4hs[4l[68C[K ;1;[A[55C[4h [4ld[66CT1 1;[A[55C[4hw[4l[66CI T 1;[A[55C[4ha[4l[65CMTIT 1;[A[55C[4hs[4l[64CII[4hM[4lI[A[59C[4h [4l[63CLM[4hI[4lM[A[60C[4h:[4l[62C[K I[4hL[4lI[A[61C[4h'[4ld[60CCL[4h [4lL[A[62C[4h,[4l[60CS [4hC[4l [A[63C[4h [4l[61CEC[4hS[4lC[A[62C',date_format(created_at, '%b %D %Y')[4h)[4l[23CDS[4hE[4lS[A[100C [4h [4l[21C[K E[4hD[4lE[A[101C[4ha[4l [20C1D[4h [4lD[A[102C[4hs[4l[20C[K  [4h1[4l [A[103C [4h [4lF[17CY1[4h [4l1[A[104C[4hj[4l[18CB [4hY[4l [A[105C[4ho[4l[17C[K Y[4hB[4lY[A[106C[4hi[4l [15CRB[4h [4lB[A[107C[4hn[4l[15CE [4hR[4l [A[108C[P[16CRR[P [A[108C[P [16C  [PB[A[107C[P[17C BB[PY[A[106C[P[19CYY[P [A[105C[4hd[4l[18CB [4hY[4l [A[105C[4ha[4l[17C[K Y[4hB[4lY[A[106C[4ht[4l [15CRB[4h [4lB[A[107C[4he[4l[15CE [4hR[4l [A[108C [4h [4l[13CDR[4hE[4lR[A[109C[4hi[4l[13CRE[4hD[4lE[A[110C[4hn[4l[12COD[4hR[4lD[A[111C[4hf[4l[11C[K R[4hO[4lR[A[112C[4ho[4l [9CsO[4h [4lO[A[113C[4hr[4l[9Cr [4hs[4l [A[114C [4h [4l[7Ces[4hr[4ls[A[115C[P[8Crr[Ps[A[115C[P[10Css[P [A[114C[10Cs 
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'info FROM users ORDER BY 1 DESC LIMIT 1' at line 1
+mysql> SELECT concat( 'The earliest date a user joined us was : ',date_format(created_at, '%b %D %Y')) as date info FROM users  ORDER BY 1 DESC LIMIT 1;[A[125C[4h'[4l[9Cr [4hs[4l [A[114C [4h'[4l[18Ces[4hr[4ls[A[105C[18Cer
++-------------------------------------------------------+
+| date info                                             |
++-------------------------------------------------------+
+| The earliest date a user joined us was : Sep 9th 2021 |
++-------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT concat( 'The earliest date a user joined us was : ',date_format(created_at, '%b %D %Y')) as 'date info' FROM use rs ORDER BY 1 DESC LIMIT 1;[A[125Cus was : ',date_format(created_at, '%b %D %Y')[4h,[4l[23Csr[4he[4lr[A[100C[4h [4l[22Cue[4hs[4le[A[101C[4hh[4l[21C[K s[4hu[4ls[A[102C[4hi[4l)[19CMu[4h [4lu[A[103C[4hs[4l[19CO [4hM[4l [A[104C[4h [4l[18CRM[4hO[4lM[A[105C[P[19COO[PM[A[105C[P[20CMM[P [A[104C[P)[20C  [Pu[A[103C[P[21C uu[Ps[A[102C[4h'[4l[21C[K s[4hu[4ls[A[102C[4hh[4l)[19CMu[4h [4lu[A[103C[4hi[4l[19CO [4hM[4l [A[104C[P[20CMM[P [A[104C[4he[4l[19CO [4hM[4l [A[104C[4hr[4l[18CRM[4hO[4lM[A[105C[4h/[4l[17CFO[4hR[4lO[A[106C[4hh[4l[16C[K R[4hF[4lR[A[107C[4hi[4l)[14C'F[4h [4lF[A[108C[4hs[4l[14Co [4h'[4l [A[109C[4h [4l[13Cf'[4ho[4l'[A[110C[4he[4l[12Cno[4hf[4lo[A[111C[4hm[4l[11Cif[4hn[4lf[A[112C[4ha[4l[10C[K n[4hi[4ln[A[113C[4hi[4l)[8Cei[4h [4li[A[114C[4hl[4l[8Ct [4he[4l [A[115C[4h [4l[7Cae[4ht[4le[A[116C[4hi[4l[6Cdt[4ha[4lt[A[117C[4hs[4l[5C'a[4hd[4la[A[118C[P[6Cdd[Pa[A[118C[P[7Caa[Pt[A[117C[4ha[4l[6Cdt[4ha[4lt[A[117C[4hd[4l[5C'a[4hd[4la[A[118C[4hd[4l) as[K d[4h'[4ld[A[119Cr) as'[4h [4l'[A[120Ce) a [125C[4hs[4l [A[121Cs)[K s[4ha[4ls[A[122Cs)a[4h [4la[A[123C[K  [4h)[4l [4hi[4l)[4hs[4l)[4h'[4l)[4h,[4l)

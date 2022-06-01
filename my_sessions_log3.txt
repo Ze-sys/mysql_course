@@ -1,0 +1,240 @@
+mysql> use ig_clone;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> 
+mysql> 
+mysql> SELECT 
+    ->  /*      users.id,
+   /*>        users.username, 
+   /*>        likes.photo_id,
+   /*>        count(likes.photo_id) as like_counts,
+   /*>  */      
+    ->        CONCAT('The winner of most likes per single photo is ', users.username, ' (user id ', users.id,')',
+    ->                  ' for his photo ', photos.image_url, ', which managed ', count(likes.photo_id), ' likes. The photo id is ', photos.id) AS winner
+    -> FROM  photos
+    -> JOIN  users
+    ->     ON photos.user_id = users.id
+    -> JOIN likes
+    ->     ON likes.photo_id = photos.id
+    ->     GROUP BY likes.photo_id, photos.user_id 
+    ->     ORDER BY count(likes.photo_id) desc
+    ->     LIMIT 1;
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+| winner                                                                                                                                                 |
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+| The winner of most likes per single photo is Zack_Kemmer93 (user id 52) for his photo https://jarret.name, which managed 48 likes. The photo id is 145 |
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.07 sec)
+
+mysql> -- Ok. Last night I was wrong in concluding Zack_Kemmer93 was the user  who liked the most number of photos (48). Let's go back to that problem. Shall we. 
+mysql> SELECT 
+    ->        users.id,
+    ->        users.username,
+    ->        count(users.id) as like_counts
+    -> FROM  photos
+    -> JOIN  users
+    ->     ON photos.user_id = users.id
+    -> JOIN likes
+    ->     ON likes.photo_id = photos.id
+    ->     GROUP BY likes.photo_id, photos.user_id 
+    ->     ORDER BY count(users.id)
+    ->     DESC
+    ->     LIMIT 3;
++----+-----------------+-------------+
+| id | username        | like_counts |
++----+-----------------+-------------+
+| 52 | Zack_Kemmer93   |          48 |
+| 46 | Malinda_Streich |          43 |
+| 65 | Adelle96        |          43 |
++----+-----------------+-------------+
+3 rows in set (0.09 sec)
+
+mysql> -- Yeah. I was basically extracting the users who got the most likes for a single photo post. A previously solved problem! I need to see other tables such as the follows table where the rows are linked with likes table via foreign keys...
+mysql> /* 
+   /*> We have a small problem with bots on our site...
+   /*> Find users who have liked every single photo on the site
+   /*> */
+mysql> SELECT 
+    ->        users.id,
+    ->        users.username,
+    ->        count(users.id) as like_counts
+    -> FROM  users
+    ->     JOIN likes
+    ->         ON likes.user_id = users.id
+    -> GROUP BY likes.user_id 
+    -> ORDER BY count(users.id)
+    -> LIMIT 3;
++----+-----------------+-------------+
+| id | username        | like_counts |
++----+-----------------+-------------+
+| 97 | Tomas.Beatty93  |          69 |
+| 98 | Imani_Nicolas17 |          74 |
+| 99 | Alek_Watsica    |          74 |
++----+-----------------+-------------+
+3 rows in set (0.02 sec)
+
+mysql>     SELECT 
+    ->        users.id,
+    ->        users.username,
+    ->        count(users.id) as like_counts
+    -> FROM  users
+    ->     JOIN likes
+    ->         ON likes.user_id = users.id
+    -> GROUP BY likes.user_id 
+    -> ORDER BY count(users.id)
+    -> DESC
+    -> LIMIT 3;
++----+---------------+-------------+
+| id | username      | like_counts |
++----+---------------+-------------+
+| 71 | Nia_Haag      |         257 |
+|  5 | Aniya_Hackett |         257 |
+| 75 | Leslie67      |         257 |
++----+---------------+-------------+
+3 rows in set (0.08 sec)
+
+mysql> -- We know there are 257 photos. So, all users who liked 257 phots might be bots. Let's filter them all..
+mysql> select * from photos limit 1;
++----+-------------------+---------+---------------------+
+| id | image_url         | user_id | created_at          |
++----+-------------------+---------+---------------------+
+|  1 | http://elijah.biz |       1 | 2022-01-07 03:23:07 |
++----+-------------------+---------+---------------------+
+1 row in set (0.01 sec)
+
+mysql>     /* 
+   /*> We have a small problem with bots on our site...
+   /*> Find users who have liked every single photo on the site
+   /*> */
+mysql> 
+mysql> SELECT 
+    ->        users.id,
+    ->        users.username,
+    ->        count(users.id) as like_counts
+    -> FROM  users
+    ->     JOIN likes
+    ->         ON likes.user_id = users.id
+    -> GROUP BY likes.user_id 
+    -> HAVING like_counts = (SELECT COUNT(*) FROM photos)
+    -> ;
++----+--------------------+-------------+
+| id | username           | like_counts |
++----+--------------------+-------------+
+|  5 | Aniya_Hackett      |         257 |
+| 14 | Jaclyn81           |         257 |
+| 21 | Rocio33            |         257 |
+| 24 | Maxwell.Halvorson  |         257 |
+| 36 | Ollie_Ledner37     |         257 |
+| 41 | Mckenna17          |         257 |
+| 54 | Duane60            |         257 |
+| 57 | Julien_Schmidt     |         257 |
+| 66 | Mike.Auer39        |         257 |
+| 71 | Nia_Haag           |         257 |
+| 75 | Leslie67           |         257 |
+| 76 | Janelle.Nikolaus81 |         257 |
+| 91 | Bethany20          |         257 |
++----+--------------------+-------------+
+13 rows in set (0.09 sec)
+
+mysql> -- Based on our assumption there may be 13 bots.    
+
+
+mysql> -- let's go back to a previous problem on the avg photo per user for now...
+mysql> 
+mysql> /*
+   /*> Q: Our Investors want to know...
+   /*> How many times does the average user post?
+   /*> Post what comment or photo?
+   /*> */
+
+mysql> SELECT  COUNT(photos.id)/ COUNT(users.id)
+    -> FROM users
+    -> RIGHT JOIN photos
+    ->     ON users.id = photos.user_id
+    ->   ;  
++-----------------------------------+
+| COUNT(photos.id)/ COUNT(users.id) |
++-----------------------------------+
+|                            1.0000 |
++-----------------------------------+
+1 row in set (0.00 sec)
+
+mysql> -- This makes sense since every photo has a user assciated to it. 
+mysql> SELECT COUNT(*) FROM users;
++----------+
+| COUNT(*) |
++----------+
+|      100 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT COUNT(*) FROM photos;
++----------+
+| COUNT(*) |
++----------+
+|      257 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> 
+mysql> SELECT (SELECT COUNT(photos.id) FROM photos)/ (SELECT COUNT(users.id) FROM users) AS 'AVERAGE PHOTO PER USER';  
++------------------------+
+| AVERAGE PHOTO PER USER |
++------------------------+
+|                 2.5700 |
++------------------------+
+1 row in set (0.02 sec)
+
+mysql> /*
+   /*> A brand wants to know which hashtags to use in a post
+   /*> What are the top 5 most commonly used hashtags?
+   /*> */
+mysql> SELECT tags.tag_name, count(tags.id) AS tag_counts
+    -> FROM tags
+    -> JOIN photo_tags
+    ->     ON photo_tags.tag_id = tags.id
+    -> GROUP BY tags.id
+    -> ORDER BY 2
+    -> DESC
+    -> LIMIT 5
+    -> ;
++----------+------------+
+| tag_name | tag_counts |
++----------+------------+
+| smile    |         59 |
+| beach    |         42 |
+| party    |         39 |
+| fun      |         38 |
+| lol      |         24 |
++----------+------------+
+5 rows in set (0.08 sec)
+
+mysql> -- I guess this concludes the MYSQL course in the cli for now. Moving onto building node.js apps...
+mysql> exit
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| bakery_app         |
+| books_db           |
+| cats_app           |
+| dogs_app           |
+| ig_clone           |
+| mysql              |
+| performance_schema |
+| shirts_db          |
+| students_db        |
+| sys                |
+| tv_reviews_app     |
++--------------------+
+12 rows in set (0.04 sec)
+
+mysql> CREATE DATABASE join_us;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use join_us;
+Database changed
+mysql> 
